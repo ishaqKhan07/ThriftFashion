@@ -3,7 +3,7 @@
 $title = 'Seller Reviews';
 include 'header.php';
 
-$contact = $data->select('select * from contact');
+$contact = $data->select('select * from contact_setting');
 $links = $data->select('select * from quick_links');
 
 
@@ -11,7 +11,56 @@ if(isset($_POST['contact'])){
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
+
+    $query = "update contact_setting set support_mail = '$email', phone = $phone ,address = '$address' where id = 1"; 
+    $result = $data->update($query);
+
+    if($result){
+?>
+        <script>
+            Swal.fire(
+            'Success!',
+            'Data Updated Successfully!',
+            'success'
+        );
+        </script>
+<?php
+    }
+
 }
+
+if(isset($_POST['link'])){
+    $fb = $_POST['facebook'];
+    $twt = $_POST['twitter'];
+    $lkd = $_POST['linkedin'];
+    $insta = $_POST['instagram'];
+    $pnt = $_POST['pinterest'];
+
+    $query = "update quick_links set facebook = '$fb', twitter = '$twt' ,linkedin = '$lkd', instagram = '$insta', pinterest = '$pnt' where id = 1"; 
+    $result = $data->update($query);
+
+    if($result){
+        ?>
+                <script>
+                    Swal.fire(
+                    'Success!',
+                    'Data Updated Successfully!',
+                    'success'
+                );
+                </script>
+        <?php
+    }
+}
+
+// if(isset($_POST['contact'])){
+//     $email = $_POST['email'];
+//     $phone = $_POST['phone'];
+//     $address = $_POST['address'];
+
+//     $query = "update contact_setting set support_mail = '$email', phone = $phone ,address = '$address' where id = 1"; 
+//     $result = $data->update($query);
+
+// }
 
 
 ?>
@@ -55,12 +104,12 @@ if(isset($_POST['contact'])){
                                 <input type="text" name="linkedin" value="<?= $links['linkedin'] ?>" class="form-control mb-2"/>
 
                                 <label>Instagram</label>
-                                <input type="text" name="linkedin" value="<?= $links['instagram'] ?>" class="form-control mb-2"/>
+                                <input type="text" name="instagram" value="<?= $links['instagram'] ?>" class="form-control mb-2"/>
 
                                 <label>Pinterest</label>
                                 <input type="text" name="pinterest" value="<?= $links['pinterest'] ?>" class="form-control mb-2"/>
             
-                                <button type="submit" class="btn theme-btn mt-2">Update</button>
+                                <button type="submit" name="link" class="btn theme-btn mt-2">Update</button>
                             </form>
                         </div>
                     </div>
@@ -90,4 +139,5 @@ if(isset($_POST['contact'])){
         </div>
     </div>
 </section>
-<?php include 'footer.php'?>
+
+<?php include 'footer.php';?>

@@ -17,6 +17,11 @@ class db{
         $data = mysqli_fetch_assoc($result);
         return $data;                                                      
     }    
+
+    public function update($query){
+        $result = $this->conn->query($query);        
+        return $result;                                                      
+    } 
 }   
 
 

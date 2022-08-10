@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 10, 2022 at 05:52 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.0.19
+-- Generation Time: Aug 11, 2022 at 01:00 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -92,6 +92,7 @@ INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`) VALUES
 --
 
 CREATE TABLE `contact_setting` (
+  `id` int(11) NOT NULL,
   `address` varchar(200) NOT NULL,
   `phone` bigint(11) NOT NULL,
   `support_mail` varchar(100) NOT NULL
@@ -101,8 +102,8 @@ CREATE TABLE `contact_setting` (
 -- Dumping data for table `contact_setting`
 --
 
-INSERT INTO `contact_setting` (`address`, `phone`, `support_mail`) VALUES
-('weffewefwef', 233424234, 'dsdfdfsdfsdf');
+INSERT INTO `contact_setting` (`id`, `address`, `phone`, `support_mail`) VALUES
+(1, '627 Wakehurst Drive West Haven, CT 0651', 233424234, 'thrift.support@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -190,7 +191,7 @@ CREATE TABLE `quick_links` (
 --
 
 INSERT INTO `quick_links` (`id`, `facebook`, `twitter`, `instagram`, `linkedin`, `pinterest`) VALUES
-(1, 'www.facebook.com', 'www.facebook.com', 'www.facebook.com', 'www.facebook.com', 'www.facebook.com');
+(1, 'www.facebook.comm', 'www.twitter.com', 'www.instagram.com', 'www.linkedin.com', 'www.pinterest.com');
 
 -- --------------------------------------------------------
 
@@ -234,6 +235,12 @@ ALTER TABLE `brand`
 -- Indexes for table `catagories`
 --
 ALTER TABLE `catagories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact_setting`
+--
+ALTER TABLE `contact_setting`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -287,6 +294,12 @@ ALTER TABLE `brand`
 --
 ALTER TABLE `catagories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `contact_setting`
+--
+ALTER TABLE `contact_setting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `feedback`
