@@ -1,0 +1,349 @@
+.dashboard .shipmethods {
+  display: flex;
+  align-items: center;
+}
+.dashboard .heading_wrappers {
+  display: flex;
+  align-items: center;
+}
+.dashboard .heading_wrappers h4 {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Poppins";
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+/* .dashboard .form-group.d-flex label {
+  flex: 4;
+}
+.dashboard .form-group.d-flex input {
+  flex: 8;
+} */
+.dashboard .heading_wrappers h5 {
+  color: #000000;
+  font-size: 11px;
+  font-family: "Poppins";
+  font-weight: 600;
+  margin: 0;
+}
+.dashboard .shipment_methods {
+  flex: 1;
+  margin-left: 45px;
+}
+.dashboard ul.shipmemntradios {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.dashboard ul.shipmemntradios label.container {
+  padding: 0;
+  margin: 0;
+  display: unset;
+  font-size: 11px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.dashboard ul.shipmemntradios li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.dashboard ul.shipmemntradios label.container input {
+  opacity: 0;
+}
+.dashboard ul.shipmemntradios label.container span.checkmark:before {
+  content: "";
+  background: transparent;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: -20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 0px 1px #939090;
+  top: 1px;
+}
+.dashboard
+  ul.shipmemntradios
+  label.container
+  input:checked
+  ~ span.checkmark:before {
+  background: #07a8c4;
+}
+.dashboard .filters .title h6 {
+  color: #000000;
+  font-size: 11px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .filters .form-group label {
+  color: #000000;
+  font-size: 11px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .filters .form-group .form-control {
+  width: 100%;
+  font-weight: 400;
+  border: 1px solid #000000;
+  color: #000000;
+  font-family: "Poppins";
+  font-size: 11px;
+  border-radius: 4px;
+}
+.dashboard .filters .form-group {
+  flex: 1;
+}
+.dashboard .filters .input-group {
+  align-items: center;
+}
+.dashboard .filters .input-group span.spacer {
+  margin: 10px 10px 0px;
+}
+.sellers_orders {
+  padding: 20px;
+  background: #fbfbfb;
+}
+.sellers_orders h4 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+}
+.sellers_orders .paginations_results {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  align-items: center;
+}
+.sellers_orders .paginations_results .showing_results p {
+  color: #000000;
+  font-size: 12px;
+  font-family: "Poppins";
+  margin: 0 0 15px;
+  margin-bottom: 0;
+}
+.sellers_orders .paginations_results .showing_results {
+  margin-right: 30px;
+}
+.sellers_orders .paginations_results ul.paginations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sellers_orders .paginations_results ul.paginations li {
+  display: inline-block;
+}
+.sellers_orders .paginations_results ul.paginations li.arrow {
+  border: 1px solid #ababab;
+  padding: 5px 15px;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+.sellers_orders .paginations_results ul.paginations li.arrow i {
+  color: #07a8c4;
+  font-size: 25px;
+}
+.sellers_orders .paginations_results ul.paginations li.pagi {
+  padding: 0 5px;
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.add-upload-wrapper button.add-products {
+  background: #07a8c4;
+  padding: 9px 27px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.add-upload-wrapper button.upload-products {
+  background: #e8fbff;
+  padding: 9px 55px;
+  color: #07a8c4;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #07a8c4;
+}
+.dashboard .sellers_orders .table-resposnive th {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: "Poppins";
+  border-top: 0px;
+  border-bottom: 1px solid #bababa;
+}
+.sellers_orders .table-resposnive td.orderid {
+  color: #2dc215;
+  font-family: "Poppins";
+  font-size: 11px;
+  font-weight: 300;
+}
+.sellers_orders .table-resposnive td {
+  font-family: "Poppins";
+  font-size: 11px;
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+}
+.sellers_orders .button-wrap button {
+  background: transparent;
+  border: none;
+}
+.sellers_orders td.Boost button.boost-btn {
+  color: #07a8c4;
+  padding: 0px;
+  background: transparent;
+  font-family: "Poppins";
+  text-decoration: underline;
+  font-size: 12px;
+}
+.sellers_orders button.details-btn {
+  color: #07a8c4;
+  padding: 0px;
+  background: transparent;
+  font-family: "Poppins";
+  font-size: 12px;
+}
+
+.sellers_orders img.pro-table-img {
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+}
+.sellers_orders td {
+  vertical-align: middle;
+}
+
+div#exampleModalCenter button.close {
+  position: absolute;
+  right: 4px;
+  color: #07a8c4;
+  opacity: 1;
+  top: 4px;
+  z-index: 99999;
+  cursor: pointer;
+}
+div#exampleModalCenter .modal-body {
+  padding: 48px;
+}
+div#exampleModalCenter h4 {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bcbcbc;
+  padding-bottom: 10px;
+}
+div#exampleModalCenter .form-control {
+  border: 1px solid;
+  color: #707070;
+  font-family: "Poppins";
+  border-radius: 3px;
+}
+div#exampleModalCenter button.btn {
+  display: block;
+  background: #07a8c4;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 500;
+  padding: 9px 26px;
+  border: 1px solid;
+  transition: all 0.3s ease-in-out;
+}
+div#exampleModalCenter button.btn:hover {
+  outline: 1px solid #07a8c4;
+}
+div#exampleModalCenter [type="radio"]:checked,
+div#exampleModalCenter [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+div#exampleModalCenter [type="radio"]:checked + label,
+div#exampleModalCenter [type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+div#exampleModalCenter [type="radio"]:checked + label:before,
+div#exampleModalCenter [type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+div#exampleModalCenter [type="radio"]:checked + label:after,
+div#exampleModalCenter [type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #07a8c4;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+div#exampleModalCenter [type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+div#exampleModalCenter [type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+div#exampleModalCenter .form-check {
+  padding: 0px 0px;
+}
+div#exampleModalCenter .form-check label.form-check-label {
+  color: #07a8c4;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+}
+div#exampleModalCenter .modal-dialog {
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+div#exampleModalCenter .form-group.d-flex {
+  justify-content: space-between;
+}
+
+div#exampleModalCenter button.cancel {
+  background: #e8fbff;
+  padding: 9px 44px;
+  color: #07a8c4;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #07a8c4;
+}
+
+div#exampleModalCenter button.pay-now {
+  background: #07a8c4;
+  padding: 9px 44px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.sellers_orders .table-resposnive {
+  overflow: scroll;
+}

@@ -1,0 +1,272 @@
+/* Seller Account Css Start Here */
+.dashboard .seller_profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 145px;
+}
+.dashboard .seller_profile .img_box img {
+  width: 70px;
+}
+.dashboard .seller_profile .seller_content h4.name {
+  font-family: "Poppins";
+  font-size: 18px;
+  margin: 0;
+}
+.dashboard .seller_profile .seller_content span.type {
+  font-size: 10px;
+  color: #2a2a2a;
+  font-family: "Poppins";
+}
+.dashboard .seller_profile .seller_content {
+  margin-left: 15px;
+}
+.dashboard .personal_information {
+  padding-top: 50px;
+  background-color: #b1b1b11f;
+  padding: 27px;
+}
+.dashboard .personal_information .headings_warpper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.dashboard .personal_information .headings_warpper h3 {
+  font-size: 14px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.dashboard .personal_information .headings_warpper .edit_btn {
+  font-size: 15px;
+  font-family: "Poppins";
+  color: #79b0b4;
+  font-weight: 600;
+  text-decoration: none;
+}
+.dashboard .personal_information .info_box .detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  justify-content: space-between;
+}
+.dashboard .personal_information .info_box .detail .property {
+  margin: 0;
+  font-size: 9.02px;
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .personal_information .info_box .detail .value {
+  color: #000000;
+  font-size: 11.02px;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+@media (max-width: 575px) {
+  .dashboard .seller_profile {
+    justify-content: left;
+  }
+  .dashboard .personal_information {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+/* SideBar Css End Here */
+
+/* Right Content Css Start Here */
+.dashboard .all_totals {
+  display: flex;
+  align-items: center;
+}
+.dashboard .all_totals .totals {
+  text-align: left;
+  padding: 0 55px;
+}
+.dashboard .all_totals .totals span.heading {
+  font-size: 15px;
+  color: #2a2a2a;
+  font-family: "Poppins";
+}
+.dashboard .all_totals .price {
+  font-size: 35px;
+  color: #2a2a2a;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .all_totals .total_orders {
+  border-left: 1px solid #0000005e;
+  border-right: 1px solid #0000005e;
+}
+.dashboard .average_rating {
+  text-align: right;
+}
+.dashboard .average_rating .title h4 {
+  font-size: 18px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.dashboard .average_rating .stars_ratings {
+  display: flex;
+  justify-content: end;
+  padding: 10px 0;
+}
+.dashboard .average_rating .stars_ratings .stars {
+  padding: 0;
+  margin: 0 15px 0 0px;
+  list-style: none;
+}
+.dashboard .average_rating .stars_ratings .stars li {
+  display: inline-block;
+}
+.dashboard .average_rating .stars_ratings .stars li i {
+  color: #ffb800;
+}
+.dashboard .average_rating .rating_count p {
+  font-size: 15px;
+  color: #000000;
+  font-family: "Poppins";
+  margin: 0;
+}
+.dashboard .average_rating p {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.dashboard .bussiness_information {
+  /* border-bottom: 1px solid #bababa; */
+  padding-bottom: 10px;
+  background-color: #b1b1b10d;
+  padding: 20px;
+  margin-top: 19px;
+}
+.for-background {
+  background-color: #b1b1b11f;
+  padding: 15px;
+}
+.dashboard .bussiness_information .headings_warpper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.dashboard .bussiness_information .headings_warpper h4 {
+  color: #000000;
+  font-size: 18px;
+  font-family: "Poppins";
+}
+.dashboard .bussiness_information .headings_warpper .edit-btn {
+  font-size: 12px;
+  color: #76b0b4;
+  font-family: "Poppins";
+  font-weight: 500;
+  text-decoration: underline;
+}
+.dashboard .bussiness_information .detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.dashboard .bussiness_information .detail .property {
+  margin: 0;
+  font-size: 11.02px;
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 600;
+  width: 230px;
+}
+.dashboard .bussiness_information .detail .value {
+  color: #000000;
+  font-size: 11.02px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+.dashboard .bank_information {
+  padding-top: 20px;
+  background-color: #b1b1b114;
+  padding: 20px;
+}
+.dashboard .bank_information .heading_wrapper h4 {
+  color: #000000;
+  font-family: "Poppins";
+  font-size: 18px;
+}
+.dashboard .bank_information .heading_wrapper p {
+  margin: 0;
+  font-size: 11px;
+  color: #8b8b8b;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .bank_information label {
+  color: #000000;
+  font-size: 12px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .bank_information .form-control {
+  border: 1px solid #000000;
+  padding: 13px 20px;
+  color: #000000;
+  font-family: "Poppins";
+  font-size: 12px;
+}
+.dashboard .bank_information .button-group {
+  margin-top: 15px;
+}
+.dashboard .bank_information .button-group .btn {
+  min-width: 150px;
+  background: #07a8c4;
+  font-size: 12px;
+  color: #fff;
+  font-family: "Poppins";
+  padding: 11px 10px;
+  margin-right: 20px;
+  transition: 0.6s;
+  border: 2px solid #07a8c4;
+  cursor: pointer;
+}
+.dashboard .bank_information .button-group .btn:hover {
+  border-color: #000000;
+  background: transparent;
+  color: #000;
+}
+/* Right Content Css End Here */
+@media (max-width: 575px) {
+  .dashboard .col-lg-9.pl-5 {
+    padding-left: 0 !important;
+  }
+  .dashboard .col-lg-9.pl-5 {
+    padding-left: 0 !important;
+  }
+  .dashboard .all_totals {
+    display: block;
+  }
+  .dashboard .all_totals .total_orders {
+    border: 0;
+  }
+  .dashboard .all_totals .totals {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .dashboard .average_rating {
+    text-align: center;
+  }
+  .dashboard .average_rating .stars_ratings {
+    justify-content: center;
+  }
+  .dashboard .bussiness_information .detail .property {
+    width: 180px;
+  }
+  .dashboard .bank_information .button-group {
+    text-align: center;
+  }
+  .dashboard .bank_information .button-group .btn {
+    min-width: 140px;
+  }
+  .dashboard .bank_information .button-group .btn:last-child {
+    margin: 0;
+  }
+}
+/* Seller Account Css End Here */

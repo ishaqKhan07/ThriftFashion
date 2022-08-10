@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10.891" height="10.424" viewBox="0 0 10.891 10.424">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fdd134"/>
+      <stop offset="1" stop-color="#ef6a0f"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_awesome-star" data-name="Icon awesome-star" d="M6.3.362l-1.329,2.7L2,3.491A.652.652,0,0,0,1.639,4.6L3.791,6.7,3.282,9.661a.651.651,0,0,0,.945.686l2.661-1.4,2.661,1.4a.652.652,0,0,0,.945-.686L9.983,6.7l2.152-2.1a.652.652,0,0,0-.36-1.111L8.8,3.057,7.471.362A.652.652,0,0,0,6.3.362Z" transform="translate(-1.441 0.001)" fill="url(#linear-gradient)"/>
+</svg>

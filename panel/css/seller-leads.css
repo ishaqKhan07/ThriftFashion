@@ -1,0 +1,70 @@
+.customer-wrapper {
+  background: #fbfbfb;
+  padding: 20px;
+}
+.dashboard button.add-labels {
+  font-size: 12px;
+  background: #07a8c4;
+  border: none;
+  padding: 4px 21px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+.customer-wrapper .button-wrap button {
+  background: transparent;
+  border: none;
+}
+.customer-wrapper .button-wrapper button {
+  background: transparent;
+  border: none;
+  color: #07a8c4;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Poppins";
+}
+/* add lead css starts here */
+.edit-customer-form {
+  padding: 20px;
+  background: #f6f6f6ab;
+}
+.edit-customer-form button.btn-send {
+  background: #07a8c4;
+  padding: 9px 55px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.edit-customer-form button.btn-cancel {
+  background: #e8fbff;
+  padding: 9px 55px;
+  color: #07a8c4;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #07a8c4;
+}
+.edit-customer-form h4 {
+  color: #000000;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.edit-customer-form label {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+.edit-customer-form .form-control {
+  border: 1px solid #000;
+  font-family: "Poppins";
+  font-size: 11px;
+  padding: 12px;
+  border: 1px solid #707070;
+}
+/* add lead css starts here */

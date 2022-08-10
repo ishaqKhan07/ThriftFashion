@@ -1,0 +1,82 @@
+/* Seller Order Css Start Here */
+.dashboard .order_details {
+  background: #b1b1b11f;
+  padding: 40px 50px;
+}
+.dashboard .order_details .order-no p {
+  font-size: 13px;
+  font-family: "Poppins";
+  color: #000000;
+  font-weight: 300;
+}
+.dashboard .order_details .order-no p {
+  padding-bottom: 20px;
+}
+.dashboard .order_details .about-order .title {
+  border-bottom: 1px solid #bababa;
+  padding-bottom: 15px;
+}
+.dashboard .order_details .about-order .title h4 {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+.dashboard .order_details .about-order .detailed .property p {
+  font-size: 12px;
+  color: #000000;
+  font-family: "poppins";
+  font-weight: 600;
+  margin: 0;
+}
+.dashboard .order_details .about-order .detailed {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #bababa;
+}
+.dashboard .order_details .about-order .detailed .value img {
+  width: 50px;
+}
+.dashboard .order_details .about-order .detailed .value p {
+  font-size: 12px;
+  color: #000000;
+  font-family: "poppins";
+  font-weight: 600;
+  margin: 0;
+}
+.dashboard .order_details .button-group {
+  text-align: right;
+  margin-top: 25px;
+}
+.dashboard .order_details .button-group a {
+  background: #07a8c4;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 140px;
+  padding: 10px 10px;
+  transition: 0.6s;
+  border: 1px solid #07a8c4;
+}
+.dashboard .order_details .button-group a:hover {
+  background: #e0faff;
+  color: #07a8c4;
+}
+@media (max-width: 575px) {
+  .dashboard .order_details {
+    padding: 40px 20px;
+  }
+  .dashboard .order_details .order-no p {
+    font-weight: 500;
+  }
+  .dashboard .order_details .button-group {
+    text-align: center;
+  }
+  .dashboard .order_details .button-group a {
+    margin-bottom: 5px;
+  }
+}
+/* Seller Order Css End Here */

@@ -1,0 +1,269 @@
+.cutomer-res .star-and-date {
+  display: flex;
+  align-items: center;
+}
+.cutomer-res .star-and-date ul {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.cutomer-res {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+.cutomer-res .star-and-date ul li {
+  margin: 0px 2px;
+}
+.star-and-date span.date {
+  color: #999999;
+  font-size: 12px;
+  margin-left: 10px;
+  font-weight: 400;
+}
+.mob {
+  display: none;
+}
+
+header .mobile-header {
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  background: #004a55;
+  top: 0;
+  z-index: 1;
+  right: 0;
+  padding-top: 30px;
+  transition: 0.7s;
+  transform: translateX(100%);
+}
+
+header .mobile-header.show {
+  transform: translateX(0%);
+}
+
+header .mobile-header ul.mobile-nav {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header .mobile-header .cancel {
+  background: #fff;
+  width: 35px;
+  text-align: center;
+  height: 35px;
+  line-height: 55px;
+  margin: 0px 20px 20px auto;
+}
+
+header .mobile-header ul.mobile-nav li.nav-item {
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #dddddd4a;
+}
+
+header .mobile-header ul.mobile-nav li.nav-item a {
+  color: #fff;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+header .mobile-header ul.mobile-nav li.nav-item a.dropdown-item {
+  color: #004a55 !important;
+  font-size: 14px;
+  padding: 0 20px;
+  line-height: 26px;
+}
+
+@media (max-width:1100px) {
+  .mob {
+      display: block;
+  }
+
+  #seller-header .seller-header-menu {
+
+      display: none;
+
+  }
+
+  #seller-header .top-header {
+      display: none;
+  }
+
+  .mob {
+      background: #004A55;
+      padding: 15px 0px;
+  }
+
+  header#seller-header .canvas-icon i {
+      color: #fff;
+      font-size: 23px;
+  }
+}
+
+@media (max-width:991px) {
+  #seller-header .seller-header-menu ul li a {
+      font-size: 11px;
+  }
+}
+
+@media (max-width:480px) {
+  header#seller-header a.header-name {
+      color: #fff;
+      font-family: "Montserrat";
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 17px;
+  }
+
+  header .mobile-header {
+      width: 74%;
+  }
+}
+.rev-wrapper .rev-content p {
+  color: #343436;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+.rev-content button {
+  color: #07a8c4;
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: underline;
+  font-family: "Poppins";
+  background: transparent;
+  border: none;
+  padding: 0px;
+}
+.rev-content button:hover {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #07a8c4;
+}
+.cutomer-res .table thead th {
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 12px;
+}
+.cutomer-res .table td {
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.dashboard .cutomer-res h3 {
+  color: #000000;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.cutomer-res .table thead th {
+  border-top: 0px;
+  white-space: nowrap;
+}
+div#exampleModalCenter button.close {
+  position: absolute;
+  right: 4px;
+  color: #07a8c4;
+  opacity: 1;
+  top: 4px;
+  z-index: 99999;
+  cursor: pointer;
+}
+div#exampleModalCenter .modal-body {
+  padding: 29px;
+}
+div#exampleModalCenter h4 {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+div#exampleModalCenter .form-control {
+  border: 1px solid;
+  color: #707070;
+  font-family: "Poppins";
+  border-radius: 3px;
+}
+div#exampleModalCenter button.btn {
+  display: block;
+  background: #07a8c4;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 500;
+  padding: 9px 26px;
+  border: 1px solid;
+  transition: all 0.3s ease-in-out;
+}
+div#exampleModalCenter button.btn:hover {
+  outline: 1px solid #07a8c4;
+}
+.ret {
+  position: relative;
+}
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* margin: 20px; */
+}
+h1 {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+  position: absolute;
+  top: 0px;
+  right: 26%;
+}
+
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label {
+  color: #ffd700;
+} /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label {
+  color: #ffed85;
+}

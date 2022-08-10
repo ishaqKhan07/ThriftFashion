@@ -1,0 +1,79 @@
+/* Seller Campaign Css Start Here */
+.campaign_creator {
+  background: #b1b1b11f;
+  padding: 50px 100px;
+}
+.dashboard .campaign_creator .heading_wrapper {
+  padding-bottom: 30px;
+}
+.dashboard .campaign_creator .heading_wrapper h4 {
+  font-size: 22px;
+  color: #000000;
+  font-family: "poppins";
+  padding-left: 10px;
+}
+.dashboard .campaign_creator .form-group label {
+  color: #000000;
+  font-size: 12px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+select#SendTo {
+  position: relative;
+}
+.dashboard .campaign_creator .form-group .form-control {
+  border: 1px solid #000000ab;
+  color: #000000;
+  font-family: "Poppins";
+  font-size: 12px;
+  padding: 0 20px;
+  height: 40px;
+}
+.dashboard .campaign_creator .bottom_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+  border-top: 1px solid #bababa;
+  margin-top: 25px;
+}
+.dashboard .campaign_creator .bottom_bar .privacy_check {
+  display: flex;
+}
+.dashboard .campaign_creator .bottom_bar .privacy_check .form-control {
+  width: unset;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.dashboard .campaign_creator .bottom_bar .privacy_check label {
+  margin: 0;
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .campaign_creator .bottom_bar .button-group button {
+  min-width: 150px;
+  background: #07a8c4;
+  font-size: 12px;
+  color: #fff;
+  font-family: "Poppins";
+  padding: 11px 10px;
+  margin-right: 20px;
+  transition: 0.6s;
+  border: 2px solid #07a8c4;
+  cursor: pointer;
+}
+.dashboard .campaign_creator .bottom_bar .button-group button:hover {
+  color: #07a8c4;
+  background: transparent;
+}
+@media (max-width: 575px) {
+  .dashboard .campaign_creator .bottom_bar {
+    display: block;
+  }
+  .dashboard .campaign_creator .bottom_bar .button-group {
+    margin-top: 20px;
+  }
+}
+/* Seller Campaign Css End Here */

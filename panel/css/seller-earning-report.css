@@ -1,0 +1,90 @@
+/* Seller Report Css Start Here */
+
+.dashboard .earning_reports .heading_wrapper {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+.dashboard .earning_reports .heading_wrapper .earning_date {
+  margin: 0;
+  color: #636161;
+  font-family: "poppins";
+  font-size: 12px;
+  font-weight: 500;
+}
+.dashboard .earning_reports .heading_wrapper h4 {
+  font-size: 22px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.dashboard .earning_reports .show_date_by_range {
+  padding-top: 25px;
+}
+.dashboard .earning_reports .show_date_by_range label {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .earning_reports .show_date_by_range .form-group {
+  margin: 0;
+}
+.dashboard .earning_reports .show_date_by_range .form-control {
+  border: 1px solid #000000;
+  padding: 13px 20px;
+  color: #000000;
+  font-family: "Poppins";
+  font-size: 12px;
+}
+.dashboard .earning_reports .show_date_by_range button.btn {
+  background: #07a8c4;
+  padding: 8px 50px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.6s;
+  border: 2px solid #07a8c4;
+}
+.dashboard .earning_reports .show_date_by_range button.btn:hover {
+  background: transparent;
+  color: #07a8c4;
+}
+.dashboard .profile_status {
+  padding-top: 40px;
+}
+.dashboard .profile_status .statusDv {
+  background: #e8fbff;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 4px #a7a7a7;
+  margin-bottom: 10px;
+}
+.dashboard .profile_status .statusDv .property h4 {
+  font-size: 16px;
+  color: #2a2a2a;
+  font-family: "Poppins";
+  font-weight: 400;
+  margin: 0;
+}
+.dashboard .profile_status .statusDv p {
+  margin: 0;
+  font-size: 21px;
+  background: #fbfbfb;
+  color: #2a2a2a;
+  font-family: "Poppins";
+  font-weight: 600;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 1px 3px #3b636bad;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+}
+@media (max-width: 575px) {
+  .dashboard .earning_reports .show_date_by_range .form-control {
+    margin-bottom: 15px;
+  }
+}
+/* Seller Report Css End Here */

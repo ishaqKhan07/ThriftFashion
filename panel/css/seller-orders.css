@@ -1,0 +1,295 @@
+
+/* Seller Order Css Start Here */
+.dashboard .shipmethods {
+  display: flex;
+  align-items: center;
+}
+.dashboard .heading_wrappers {
+  display: flex;
+  align-items: center;
+}
+.dashboard .heading_wrappers h4 {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Poppins";
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.dashboard .heading_wrappers h5 {
+  color: #000000;
+  font-size: 11px;
+  font-family: "Poppins";
+  font-weight: 600;
+  margin: 0;
+}
+.dashboard .shipment_methods {
+  flex: 1;
+  margin-left: 45px;
+}
+.dashboard ul.shipmemntradios {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.dashboard ul.shipmemntradios label.container {
+  padding: 0;
+  margin: 0;
+  display: unset;
+  font-size: 11px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.dashboard ul.shipmemntradios li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.dashboard ul.shipmemntradios label.container input {
+  opacity: 0;
+}
+.dashboard ul.shipmemntradios label.container span.checkmark:before {
+  content: "";
+  background: transparent;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: -20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 0px 1px #939090;
+  top: 1px;
+}
+.dashboard
+  ul.shipmemntradios
+  label.container
+  input:checked
+  ~ span.checkmark:before {
+  background: #07a8c4;
+}
+.dashboard .filters .title h6 {
+  color: #000000;
+  font-size: 11px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .filters .form-group label {
+  color: #000000;
+  font-size: 11px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.dashboard .filters .form-group .form-control {
+  width: 100%;
+  font-weight: 400;
+  border: 1px solid #000000;
+  color: #000000;
+  font-family: "Poppins";
+  font-size: 11px;
+  border-radius: 4px;
+}
+.dashboard .filters .form-group {
+  flex: 1;
+}
+.dashboard .filters .input-group {
+  align-items: center;
+}
+.dashboard .filters .input-group span.spacer {
+  margin: 10px 10px 0px;
+}
+.sellers_orders {
+  background: #b1b1b11f;
+  padding: 40px 40px;
+}
+.sellers_orders tr th {
+  border: 0;
+  text-align: center;
+}
+.sellers_orders tr td {
+  border: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+.sellers_orders .heading_wrapper {
+  padding-bottom: 30px;
+}
+.sellers_orders .heading_wrapper h4 {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+.sellers_orders th {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 600;
+  vertical-align: middle;
+}
+.sellers_orders tr.topbar {
+  border-bottom: 1px solid #bababa !important;
+  height: 50px;
+}
+.sellers_orders .table tr {
+  border-bottom: 1px solid #bababa70;
+}
+.sellers_orders td.orderid {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.sellers_orders td.billingname {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.sellers_orders td.amount {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.sellers_orders td.items {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.sellers_orders td.shipmentstatus {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+.sellers_orders td.shipmentstatus i {
+  margin-left: 5px;
+}
+.sellers_orders td.details {
+  text-align: right;
+}
+.sellers_orders td.details .action_detail button {
+  font-size: 12px;
+  color: #07a8c4;
+  font-family: "Poppins";
+  font-weight: 500;
+  border: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 0 8px;
+}
+.sellers_orders .orderid {
+  text-align: left;
+  padding-left: 0;
+  width: 15%;
+}
+.sellers_orders .billingname {
+  width: 15%;
+}
+.sellers_orders .amount {
+  width: 15%;
+}
+.sellers_orders .items {
+  width: 15%;
+}
+.sellers_orders .shipmentstatus {
+  width: 17%;
+}
+.sellers_orders .details {
+  width: 25%;
+  padding-right: 0;
+}
+.sellers_orders td.details .action_detail button:last-child {
+  padding-right: 0;
+}
+.sellers_orders th.details {
+  padding-left: 60px;
+}
+.sellers_orders .paginations_results {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  align-items: center;
+}
+.sellers_orders .paginations_results .showing_results p {
+  color: #000000;
+  font-size: 12px;
+  font-family: "Poppins";
+  margin: 0 0 15px;
+  margin-bottom: 0;
+}
+.sellers_orders .paginations_results .showing_results {
+  margin-right: 30px;
+}
+.sellers_orders .paginations_results ul.paginations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sellers_orders .paginations_results ul.paginations li {
+  display: inline-block;
+}
+.sellers_orders .paginations_results ul.paginations li.arrow {
+  border: 1px solid #ababab;
+  padding: 5px 15px;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+.sellers_orders .paginations_results ul.paginations li.arrow i {
+  color: #07a8c4;
+  font-size: 25px;
+}
+.sellers_orders .paginations_results ul.paginations li.pagi {
+  padding: 0 5px;
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+}
+@media (max-width: 575px) {
+  .sellers_orders .table-resposnive {
+    overflow: auto;
+  }
+  .sellers_orders .table-resposnive .orderid {
+    min-width: 110px;
+  }
+  .sellers_orders .table-resposnive .billingname {
+    min-width: 130px;
+  }
+  .sellers_orders .table-resposnive .amount {
+    min-width: 100px;
+  }
+  .sellers_orders .table-resposnive .items {
+    min-width: 90px;
+  }
+  .sellers_orders .table-resposnive .shipmentstatus {
+    min-width: 150px;
+  }
+  .sellers_orders .table-resposnive .details {
+    padding: 0;
+    min-width: 200px;
+  }
+  .dashboard .filters .input-group {
+    display: block;
+  }
+  .dashboard .filters .input-group span.spacer {
+    display: none;
+  }
+  .dashboard .shipmethods {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .dashboard .heading_wrappers {
+    margin-bottom: 5px;
+  }
+  .dashboard .shipment_methods {
+    margin: 0 0 0 20px;
+  }
+  .sellers_orders .paginations_results {
+    display: block;
+    text-align: center;
+  }
+}
+/* Seller Order Css End Here */
+
+.sellers_orders button#dropdownMenuButton {
+  font-size: 12px;
+  color: #000000;
+  font-family: "Poppins";
+  background: transparent;
+  border: none;
+}
