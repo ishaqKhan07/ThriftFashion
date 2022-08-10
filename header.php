@@ -24,9 +24,9 @@
                 </div>
                 <div class="col-md-7 col-lg-4">
                     <ul class="header-top-list">
-                        <li><a href="offer.html">offers</a></li>
-                        <li><a href="faq.html">need help</a></li>
-                        <li><a href="contact.html">contact us</a></li>
+                        <li><a href="offer.php">offers</a></li>
+                        <li><a href="faq.php">need help</a></li>
+                        <li><a href="contact.php">contact us</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,14 +36,14 @@
         <div class="container">
             <div class="header-content">
                 <div class="header-media-group"><button class="header-user"><img src="images/user.png"
-                            alt="user"></button><a href="index.html"><img src="images/logo.png" alt="logo"></a><button
-                        class="header-src"><i class="fas fa-search"></i></button></div><a href="index.html"
-                    class="header-logo"><img src="images/logo.png" alt="logo"></a><a href="login.html"
+                            alt="user"></button><a href="index.php"><img src="images/logo.png" alt="logo"></a><button
+                        class="header-src"><i class="fas fa-search"></i></button></div><a href="index.php"
+                    class="header-logo"><img src="images/logo.png" alt="logo"></a><a href="login.php"
                     class="header-widget" title="My Account"><img src="images/user.png" alt="user"><span>join</span></a>
                 <form class="header-form"><input type="text" placeholder="Search anything..."><button><i
                             class="fas fa-search"></i></button></form>
-                <div class="header-widget-group"><a href="compare.html" class="header-widget" title="Compare List"><i
-                            class="fas fa-random"></i><sup>0</sup></a><a href="wishlist.html" class="header-widget"
+                <div class="header-widget-group"><a href="compare.php" class="header-widget" title="Compare List"><i
+                            class="fas fa-random"></i><sup>0</sup></a><a href="wishlist.php" class="header-widget"
                         title="Wishlist"><i class="fas fa-heart"></i><sup>0</sup></a><button
                         class="header-widget header-cart" title="Cartlist"><i
                             class="fas fa-shopping-basket"></i><sup>9+</sup><span>total
@@ -59,11 +59,11 @@
                         <ul class="navbar-list">
                             <li class="navbar-item dropdown"><a class="navbar-link dropdown-arrow" href="#">home</a>
                                 <ul class="dropdown-position-list">
-                                    <li><a href="home-grid.html">Home grid</a></li>
-                                    <li><a href="index.html">Home index</a></li>
-                                    <li><a href="home-classic.html">Home classic</a></li>
-                                    <li><a href="home-standard.html">Home standard</a></li>
-                                    <li><a href="home-category.html">Home category</a></li>
+                                    <li><a href="home-grid.php">Home grid</a></li>
+                                    <li><a href="index.php">Home index</a></li>
+                                    <li><a href="home-classic.php">Home classic</a></li>
+                                    <li><a href="home-standard.php">Home standard</a></li>
+                                    <li><a href="home-category.php">Home category</a></li>
                                 </ul>
                             </li>
                             <li class="navbar-item dropdown-megamenu"><a class="navbar-link dropdown-arrow"
@@ -75,11 +75,11 @@
                                                 <div class="megamenu-wrap">
                                                     <h5 class="megamenu-title">shop pages</h5>
                                                     <ul class="megamenu-list">
-                                                        <li><a href="shop-5column.html">shop 5 column</a></li>
-                                                        <li><a href="shop-4column.html">shop 4 column</a></li>
-                                                        <li><a href="shop-3column.html">shop 3 column</a></li>
-                                                        <li><a href="shop-2column.html">shop 2 column</a></li>
-                                                        <li><a href="shop-1column.html">shop 1 column</a></li>
+                                                        <li><a href="shop-5column.php">shop 5 column</a></li>
+                                                        <li><a href="shop-4column.php">shop 4 column</a></li>
+                                                        <li><a href="shop-3column.php">shop 3 column</a></li>
+                                                        <li><a href="shop-2column.php">shop 2 column</a></li>
+                                                        <li><a href="shop-1column.php">shop 1 column</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -87,10 +87,10 @@
                                                 <div class="megamenu-wrap">
                                                     <h5 class="megamenu-title">product pages</h5>
                                                     <ul class="megamenu-list">
-                                                        <li><a href="product-tab.html">product single tab</a></li>
-                                                        <li><a href="product-grid.html">product single grid</a></li>
-                                                        <li><a href="product-video.html">product single video</a></li>
-                                                        <li><a href="product-simple.html">product single simple</a></li>
+                                                        <li><a href="product-tab.php">product single tab</a></li>
+                                                        <li><a href="product-grid.php">product single grid</a></li>
+                                                        <li><a href="product-video.php">product single video</a></li>
+                                                        <li><a href="product-simple.php">product single simple</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -98,11 +98,11 @@
                                                 <div class="megamenu-wrap">
                                                     <h5 class="megamenu-title">user action</h5>
                                                     <ul class="megamenu-list">
-                                                        <li><a href="wishlist.html">wishlist</a></li>
-                                                        <li><a href="compare.html">compare</a></li>
-                                                        <li><a href="checkout.html">checkout</a></li>
-                                                        <li><a href="orderlist.html">order history</a></li>
-                                                        <li><a href="invoice.html">order invoice</a></li>
+                                                        <li><a href="wishlist.php">wishlist</a></li>
+                                                        <li><a href="compare.php">compare</a></li>
+                                                        <li><a href="checkout.php">checkout</a></li>
+                                                        <li><a href="orderlist.php">order history</a></li>
+                                                        <li><a href="invoice.php">order invoice</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -110,9 +110,9 @@
                                                 <div class="megamenu-wrap">
                                                     <h5 class="megamenu-title">other pages</h5>
                                                     <ul class="megamenu-list">
-                                                        <li><a href="all-category.html">all Category</a></li>
-                                                        <li><a href="brand-list.html">brand list</a></li>
-                                                        <li><a href="brand-single.html">brand single</a></li>
+                                                        <li><a href="all-category.php">all Category</a></li>
+                                                        <li><a href="brand-list.php">brand list</a></li>
+                                                        <li><a href="brand-single.php">brand single</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -251,34 +251,34 @@
                             </li>
                             <li class="navbar-item dropdown"><a class="navbar-link dropdown-arrow" href="#">pages</a>
                                 <ul class="dropdown-position-list">
-                                    <li><a href="faq.html">faqs</a></li>
-                                    <li><a href="offer.html">offers</a></li>
-                                    <li><a href="profile.html">my profile</a></li>
-                                    <li><a href="wallet.html">my wallet</a></li>
-                                    <li><a href="about.html">about us</a></li>
-                                    <li><a href="contact.html">contact us</a></li>
-                                    <li><a href="privacy.html">privacy policy</a></li>
-                                    <li><a href="coming-soon.html">coming soon</a></li>
-                                    <li><a href="blank-page.html">blank page</a></li>
-                                    <li><a href="error.html">404 Error</a></li>
-                                    <li><a href="email-template.html">email template</a></li>
+                                    <li><a href="faq.php">faqs</a></li>
+                                    <li><a href="offer.php">offers</a></li>
+                                    <li><a href="profile.php">my profile</a></li>
+                                    <li><a href="wallet.php">my wallet</a></li>
+                                    <li><a href="about.php">about us</a></li>
+                                    <li><a href="contact.php">contact us</a></li>
+                                    <li><a href="privacy.php">privacy policy</a></li>
+                                    <li><a href="coming-soon.php">coming soon</a></li>
+                                    <li><a href="blank-page.php">blank page</a></li>
+                                    <li><a href="error.php">404 Error</a></li>
+                                    <li><a href="email-template.php">email template</a></li>
                                 </ul>
                             </li>
                             <li class="navbar-item dropdown"><a class="navbar-link dropdown-arrow"
                                     href="#">authentic</a>
                                 <ul class="dropdown-position-list">
-                                    <li><a href="login.html">login</a></li>
-                                    <li><a href="register.html">register</a></li>
-                                    <li><a href="reset-password.html">reset password</a></li>
-                                    <li><a href="change-password.html">change password</a></li>
+                                    <li><a href="login.php">login</a></li>
+                                    <li><a href="register.php">register</a></li>
+                                    <li><a href="reset-password.php">reset password</a></li>
+                                    <li><a href="change-password.php">change password</a></li>
                                 </ul>
                             </li>
                             <li class="navbar-item dropdown"><a class="navbar-link dropdown-arrow" href="#">blogs</a>
                                 <ul class="dropdown-position-list">
-                                    <li><a href="blog-grid.html">blog grid</a></li>
-                                    <li><a href="blog-standard.html">blog standard</a></li>
-                                    <li><a href="blog-details.html">blog details</a></li>
-                                    <li><a href="blog-author.html">blog author</a></li>
+                                    <li><a href="blog-grid.php">blog grid</a></li>
+                                    <li><a href="blog-standard.php">blog standard</a></li>
+                                    <li><a href="blog-details.php">blog details</a></li>
+                                    <li><a href="blog-author.php">blog author</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -413,7 +413,7 @@
                         class="cart-delete"><i class="far fa-trash-alt"></i></button></div>
                 <div class="cart-info-group">
                     <div class="cart-info">
-                        <h6><a href="product-single.html">existing product name</a></h6>
+                        <h6><a href="product-single.php">existing product name</a></h6>
                         <p>Unit Price - $8.75</p>
                     </div>
                     <div class="cart-action-group">
@@ -430,7 +430,7 @@
                         class="cart-delete"><i class="far fa-trash-alt"></i></button></div>
                 <div class="cart-info-group">
                     <div class="cart-info">
-                        <h6><a href="product-single.html">existing product name</a></h6>
+                        <h6><a href="product-single.php">existing product name</a></h6>
                         <p>Unit Price - $8.75</p>
                     </div>
                     <div class="cart-action-group">
@@ -447,7 +447,7 @@
                         class="cart-delete"><i class="far fa-trash-alt"></i></button></div>
                 <div class="cart-info-group">
                     <div class="cart-info">
-                        <h6><a href="product-single.html">existing product name</a></h6>
+                        <h6><a href="product-single.php">existing product name</a></h6>
                         <p>Unit Price - $8.75</p>
                     </div>
                     <div class="cart-action-group">
@@ -464,7 +464,7 @@
                         class="cart-delete"><i class="far fa-trash-alt"></i></button></div>
                 <div class="cart-info-group">
                     <div class="cart-info">
-                        <h6><a href="product-single.html">existing product name</a></h6>
+                        <h6><a href="product-single.php">existing product name</a></h6>
                         <p>Unit Price - $8.75</p>
                     </div>
                     <div class="cart-action-group">
@@ -481,7 +481,7 @@
                         class="cart-delete"><i class="far fa-trash-alt"></i></button></div>
                 <div class="cart-info-group">
                     <div class="cart-info">
-                        <h6><a href="product-single.html">existing product name</a></h6>
+                        <h6><a href="product-single.php">existing product name</a></h6>
                         <p>Unit Price - $8.75</p>
                     </div>
                     <div class="cart-action-group">
@@ -497,7 +497,7 @@
         <div class="cart-footer"><button class="coupon-btn">Do you have a coupon code?</button>
             <form class="coupon-form"><input type="text" placeholder="Enter your coupon code"><button
                     type="submit"><span>apply</span></button></form><a class="cart-checkout-btn"
-                href="checkout.html"><span class="checkout-label">Proceed to Checkout</span><span
+                href="checkout.php"><span class="checkout-label">Proceed to Checkout</span><span
                     class="checkout-price">$369.78</span></a>
         </div>
     </aside>
@@ -505,7 +505,7 @@
         <div class="nav-header"><a href="#"><img src="images/logo.png" alt="logo"></a><button class="nav-close"><i
                     class="icofont-close"></i></button></div>
         <div class="nav-content">
-            <div class="nav-btn"><a href="login.html" class="btn btn-inline"><i class="fa fa-unlock-alt"></i><span>join
+            <div class="nav-btn"><a href="login.php" class="btn btn-inline"><i class="fa fa-unlock-alt"></i><span>join
                         here</span></a></div>
             <div class="nav-select-group">
                 <div class="nav-select"><i class="icofont-world"></i><select class="select">
@@ -522,66 +522,66 @@
             <ul class="nav-list">
                 <li><a class="nav-link dropdown-link" href="#"><i class="icofont-home"></i>Home</a>
                     <ul class="dropdown-list">
-                        <li><a href="home-grid.html">Home grid</a></li>
-                        <li><a href="index.html">Home index</a></li>
-                        <li><a href="home-classic.html">Home classic</a></li>
-                        <li><a href="home-standard.html">Home standard</a></li>
-                        <li><a href="home-category.html">Home category</a></li>
+                        <li><a href="home-grid.php">Home grid</a></li>
+                        <li><a href="index.php">Home index</a></li>
+                        <li><a href="home-classic.php">Home classic</a></li>
+                        <li><a href="home-standard.php">Home standard</a></li>
+                        <li><a href="home-category.php">Home category</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link dropdown-link" href="#"><i class="icofont-food-cart"></i>shop</a>
                     <ul class="dropdown-list">
-                        <li><a href="shop-5column.html">shop 5 column</a></li>
-                        <li><a href="shop-4column.html">shop 4 column</a></li>
-                        <li><a href="shop-3column.html">shop 3 column</a></li>
-                        <li><a href="shop-2column.html">shop 2 column</a></li>
-                        <li><a href="shop-1column.html">shop 1 column</a></li>
+                        <li><a href="shop-5column.php">shop 5 column</a></li>
+                        <li><a href="shop-4column.php">shop 4 column</a></li>
+                        <li><a href="shop-3column.php">shop 3 column</a></li>
+                        <li><a href="shop-2column.php">shop 2 column</a></li>
+                        <li><a href="shop-1column.php">shop 1 column</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link dropdown-link" href="#"><i class="icofont-page"></i>product</a>
                     <ul class="dropdown-list">
-                        <li><a href="product-tab.html">product tab</a></li>
-                        <li><a href="product-grid.html">product grid</a></li>
-                        <li><a href="product-video.html">product video</a></li>
-                        <li><a href="product-simple.html">product simple</a></li>
+                        <li><a href="product-tab.php">product tab</a></li>
+                        <li><a href="product-grid.php">product grid</a></li>
+                        <li><a href="product-video.php">product video</a></li>
+                        <li><a href="product-simple.php">product simple</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link dropdown-link" href="#"><i class="icofont-bag-alt"></i>my account</a>
                     <ul class="dropdown-list">
-                        <li><a href="profile.html">profile</a></li>
-                        <li><a href="wallet.html">wallet</a></li>
-                        <li><a href="wishlist.html">wishlist</a></li>
-                        <li><a href="compare.html">compare</a></li>
-                        <li><a href="checkout.html">checkout</a></li>
-                        <li><a href="orderlist.html">order history</a></li>
-                        <li><a href="invoice.html">order invoice</a></li>
-                        <li><a href="email-template.html">email template</a></li>
+                        <li><a href="profile.php">profile</a></li>
+                        <li><a href="wallet.php">wallet</a></li>
+                        <li><a href="wishlist.php">wishlist</a></li>
+                        <li><a href="compare.php">compare</a></li>
+                        <li><a href="checkout.php">checkout</a></li>
+                        <li><a href="orderlist.php">order history</a></li>
+                        <li><a href="invoice.php">order invoice</a></li>
+                        <li><a href="email-template.php">email template</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link dropdown-link" href="#"><i class="icofont-lock"></i>authentication</a>
                     <ul class="dropdown-list">
-                        <li><a href="login.html">login</a></li>
-                        <li><a href="register.html">register</a></li>
-                        <li><a href="reset-password.html">reset password</a></li>
-                        <li><a href="change-password.html">change password</a></li>
+                        <li><a href="login.php">login</a></li>
+                        <li><a href="register.php">register</a></li>
+                        <li><a href="reset-password.php">reset password</a></li>
+                        <li><a href="change-password.php">change password</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link dropdown-link" href="#"><i class="icofont-book-alt"></i>blogs</a>
                     <ul class="dropdown-list">
-                        <li><a href="blog-grid.html">blog grid</a></li>
-                        <li><a href="blog-standard.html">blog standard</a></li>
-                        <li><a href="blog-details.html">blog details</a></li>
-                        <li><a href="blog-author.html">blog author</a></li>
+                        <li><a href="blog-grid.php">blog grid</a></li>
+                        <li><a href="blog-standard.php">blog standard</a></li>
+                        <li><a href="blog-details.php">blog details</a></li>
+                        <li><a href="blog-author.php">blog author</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link" href="offer.html"><i class="icofont-sale-discount"></i>offers</a></li>
-                <li><a class="nav-link" href="about.html"><i class="icofont-info-circle"></i>about us</a></li>
-                <li><a class="nav-link" href="faq.html"><i class="icofont-support-faq"></i>need help</a></li>
-                <li><a class="nav-link" href="contact.html"><i class="icofont-contacts"></i>contact us</a></li>
-                <li><a class="nav-link" href="privacy.html"><i class="icofont-warning"></i>privacy policy</a></li>
-                <li><a class="nav-link" href="coming-soon.html"><i class="icofont-options"></i>coming soon</a></li>
-                <li><a class="nav-link" href="error.html"><i class="icofont-ui-block"></i>404 error</a></li>
-                <li><a class="nav-link" href="login.html"><i class="icofont-logout"></i>logout</a></li>
+                <li><a class="nav-link" href="offer.php"><i class="icofont-sale-discount"></i>offers</a></li>
+                <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
+                <li><a class="nav-link" href="faq.php"><i class="icofont-support-faq"></i>need help</a></li>
+                <li><a class="nav-link" href="contact.php"><i class="icofont-contacts"></i>contact us</a></li>
+                <li><a class="nav-link" href="privacy.php"><i class="icofont-warning"></i>privacy policy</a></li>
+                <li><a class="nav-link" href="coming-soon.php"><i class="icofont-options"></i>coming soon</a></li>
+                <li><a class="nav-link" href="error.php"><i class="icofont-ui-block"></i>404 error</a></li>
+                <li><a class="nav-link" href="login.php"><i class="icofont-logout"></i>logout</a></li>
             </ul>
             <div class="nav-info-group">
                 <div class="nav-info"><i class="icofont-ui-touch-phone"></i>
@@ -596,11 +596,11 @@
             </div>
         </div>
     </aside>
-    <div class="mobile-menu"><a href="index.html" title="Home Page"><i
+    <div class="mobile-menu"><a href="index.php" title="Home Page"><i
                 class="fas fa-home"></i><span>Home</span></a><button class="cate-btn" title="Category List"><i
                 class="fas fa-list"></i><span>category</span></button><button class="cart-btn" title="Cartlist"><i
-                class="fas fa-shopping-basket"></i><span>cartlist</span><sup>9+</sup></button><a href="wishlist.html"
-            title="Wishlist"><i class="fas fa-heart"></i><span>wishlist</span><sup>0</sup></a><a href="compare.html"
+                class="fas fa-shopping-basket"></i><span>cartlist</span><sup>9+</sup></button><a href="wishlist.php"
+            title="Wishlist"><i class="fas fa-heart"></i><span>wishlist</span><sup>0</sup></a><a href="compare.php"
             title="Compare List"><i class="fas fa-random"></i><span>compare</span><sup>0</sup></a></div>
     <div class="modal fade" id="product-view">
         <div class="modal-dialog">
@@ -633,7 +633,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="view-details">
-                                <h3 class="view-name"><a href="product-video.html">existing product name</a></h3>
+                                <h3 class="view-name"><a href="product-video.php">existing product name</a></h3>
                                 <div class="view-meta">
                                     <p>SKU:<span>1234567</span></p>
                                     <p>BRAND:<a href="#">radhuni</a></p>
@@ -641,7 +641,7 @@
                                 <div class="view-rating"><i class="active icofont-star"></i><i
                                         class="active icofont-star"></i><i class="active icofont-star"></i><i
                                         class="active icofont-star"></i><i class="icofont-star"></i><a
-                                        href="product-video.html">(3 reviews)</a></div>
+                                        href="product-video.php">(3 reviews)</a></div>
                                 <h3 class="view-price"><del>$38.00</del><span>$24.00<small>/per kilo</small></span></h3>
                                 <p class="view-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit non tempora
                                     magni repudiandae sint suscipit tempore quis maxime explicabo veniam eos
@@ -671,7 +671,7 @@
                                 </div>
                                 <div class="view-action-group"><a class="view-wish wish" href="#"
                                         title="Add Your Wishlist"><i class="icofont-heart"></i><span>add to
-                                            wish</span></a><a class="view-compare" href="compare.html"
+                                            wish</span></a><a class="view-compare" href="compare.php"
                                         title="Compare This Item"><i class="fas fa-random"></i><span>Compare
                                             This</span></a></div>
                             </div>

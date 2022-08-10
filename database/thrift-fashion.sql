@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 10, 2022 at 12:51 PM
+-- Generation Time: Aug 10, 2022 at 05:16 PM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- PHP Version: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,6 +49,45 @@ CREATE TABLE `catagories` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `subject` varchar(200) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`) VALUES
+(1, 'mansoor', 'mansooor9869@gmail.com', 'login problem', ''),
+(2, '', '', '', ''),
+(3, '', '', '', ''),
+(4, '', '', '', ''),
+(5, '', '', '', ''),
+(6, '', '', '', ''),
+(7, '', '', '', ''),
+(8, '', '', '', ''),
+(9, '', '', '', ''),
+(10, '', '', '', ''),
+(11, '', '', '', ''),
+(12, '', '', '', ''),
+(13, '', '', '', ''),
+(14, 'mansoor', '', '', ''),
+(15, 'mansoor', '', '', ''),
+(16, 'hsldghlaw', 'sdjfhjsdkhgl', '', ''),
+(17, 'hsldghlaw', 'sdjfhjsdkhgl', '', ''),
+(18, 'hsldghlaw', 'sdjfhjsdkhgl', '', ''),
+(19, 'hsldghlaw', 'sdjfhjsdkhgl', '', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `feedback`
 --
 
@@ -58,6 +97,24 @@ CREATE TABLE `feedback` (
   `feedback` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL,
+  `email` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`id`, `email`) VALUES
+(1, 'nim9869@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -139,10 +196,22 @@ ALTER TABLE `catagories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orders`
@@ -185,10 +254,22 @@ ALTER TABLE `catagories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `orders`

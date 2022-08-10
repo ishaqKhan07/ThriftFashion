@@ -1,5 +1,6 @@
 <?php include 'header-link.php';
 include 'header.php';
+
 ?>
 <link rel="stylesheet" href="css/reset-password.css">
 
@@ -29,7 +30,6 @@ include 'header.php';
             </div>
         </div>
     </section>
-
 <?php include 'footer-link.php';
 include 'footer.php';
 ?>

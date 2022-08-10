@@ -2,6 +2,7 @@
 include 'header.php';
 ?>
 <link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/user-auth.css">
 <body>
     <section class="user-form-part">
         <div class="container">
