@@ -1,3 +1,8 @@
+<?php 
+    include 'connect.php';
+    $data = new db();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -125,7 +130,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="seller-account.php" class="nav-link">My Accounts</a>
+                                <a href="seller-account.php" class="nav-link">Settings</a>
                             </li>
                         </ul>
                     </div>
