@@ -1,3 +1,10 @@
+<?php
+$contact = $data->select('select * from contact_setting');
+$links = $data->select('select * from quick_links');
+
+
+
+?>
 <footer class="footer-part">
         <div class="container">
             <div class="row">
