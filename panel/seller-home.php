@@ -8,16 +8,14 @@ include 'header.php'
 <section class="dashboard">
     <div class="container-fluid">
         <div class="row">
-            
             <div class="col-lg-12">
                 <div class="row">
-                    <!-- seller dashboard stats starts here -->
                     <div class="col-lg-3">
                         <div class="dashboard-stats-wrapper">
                             <h6 class="item-label">Total Orders </h6>
                             <div class="stats-and-number">
                                 <h2>950</h2>
-                                <img src="img/total-orders.svg" alt="">
+                                <img src="img/total-orders.svg" alt="" style="width: 13%;">
                             </div>
                         </div>
                     </div>

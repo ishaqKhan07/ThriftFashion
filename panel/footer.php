@@ -1,3 +1,24 @@
+<?php
+
+    $script = '';
+
+    if(isset($_SESSION['flash_success']) && !empty($_SESSION['flash_success']) ){
+        $flash = $_SESSION['flash_success'];
+
+                $script =  <<< JS
+                    Swal.fire(
+                        'Success!',
+                        '$flash',
+                        'success'
+                    );
+                JS;
+
+        unset($_SESSION['flash_success']);
+}
+
+
+
+?>
 
 <script src="../../code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
 <script src="../../cdn.jsdelivr.net/npm/popper.js%401.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
@@ -521,3 +542,5 @@
     });
     // Button js 
 </script>
+
+<script><?php echo $script; ?></script>

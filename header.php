@@ -1,8 +1,11 @@
 <?php include 'header-link.php';
 include 'connect.php';
 $data = new db();
+
+$contactSettings = $data->select('select * from contact_setting');
 $contact = $data->select('select * from contact_setting');
 $links = $data->select('select * from quick_links');
+
 ?>
 <div class="backdrop"></div><a class="backtop fas fa-arrow-up" href="#"></a>
 <div class="header-top">
@@ -110,12 +113,17 @@ $links = $data->select('select * from quick_links');
                         </li>
                     </ul>
                     <div class="navbar-info-group">
+                        <?php
+                            while ($con = mysqli_fetch_assoc($contactSettings)){
+                        ?>
                         <div class="navbar-info"><i class="icofont-ui-touch-phone"></i>
-                            <p><?= $contact['phone'] ?></p>
+                            <p><?= $con['phone'] ?></p>
                         </div>
                         <div class="navbar-info"><i class="icofont-ui-email"></i>
-                            <p><small>email us</small><span>support@example.com</span></p>
+                            <p><small>email us</small><span><?= $con['support_mail'] ?></span></p>
                         </div>
+
+                    <?php } ?>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,3 @@
-<?php
-
-
-
-
-?>
 <footer class="footer-part">
         <div class="container">
             <div class="row">
@@ -13,28 +7,38 @@
                         <p class="footer-desc">Adipisci asperiores ipsum ipsa repellat consequatur repudiandae quisquam
                             assumenda dolor perspiciatis sit ipsum dolor amet.</p>
                         <ul class="footer-social">
-                            <li><a class="icofont-facebook" href="<?= $links['facebook'] ?>"></a></li>
-                            <li><a class="icofont-twitter" href="<?= $links['twitter'] ?>"></a></li>
-                            <li><a class="icofont-linkedin" href="<?= $links['linkedin'] ?>"></a></li>
-                            <li><a class="icofont-instagram" href="<?= $links['instagram'] ?>"></a></li>
-                            <li><a class="icofont-pinterest" href="<?= $links['pinterest'] ?>"></a></li>
+                            <?php
+                                 while ($link = mysqli_fetch_assoc($links)){
+                            ?>
+                                <li><a class="icofont-facebook" href="<?= $link['facebook'] ?>"></a></li>
+                                <li><a class="icofont-twitter" href="<?= $link['twitter'] ?>"></a></li>
+                                <li><a class="icofont-linkedin" href="<?= $link['linkedin'] ?>"></a></li>
+                                <li><a class="icofont-instagram" href="<?= $link['instagram'] ?>"></a></li>
+                                <li><a class="icofont-pinterest" href="<?= $link['pinterest'] ?>"></a></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6 col-xl-3">
                     <div class="footer-widget contact">
                         <h3 class="footer-title">contact us</h3>
+                        <div class="navbar-info-group">
                         <ul class="footer-contact">
-                            <li><i class="icofont-ui-email"></i>
-                                <p><?= $contact['support_mail'] ?></p>
+                        <?php
+                            while ($con = mysqli_fetch_assoc($contact)) {
+                        ?>
+                                <li><i class="icofont-ui-email moiz"></i>
+                                <p><?= $con['support_mail'] ?></p>
                             </li>
                             <li><i class="icofont-ui-touch-phone"></i>
-                                <p><?= $contact['phone'] ?></p>
+                                <p><?= $con['phone'] ?></p>
                             </li>
                             <li><i class="icofont-location-pin"></i>
-                                <p>1<?= $contact['address'] ?></p>
+                                <p><?= $con['address'] ?></p>
                             </li>
+                            <?php } ?>
                         </ul>
+                    </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-xl-3">
@@ -68,6 +72,7 @@
                     </div>
                 </div>
             </div>
+            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="footer-bottom">
@@ -75,9 +80,11 @@
                         <div class="footer-card"><a href="#"><img src="images/payment/jpg/01.jpg" alt="payment"></a><a
                                 href="#"><img src="images/payment/jpg/02.jpg" alt="payment"></a><a href="#"><img
                                     src="images/payment/jpg/03.jpg" alt="payment"></a><a href="#"><img
-                                    src="images/payment/jpg/04.jpg" alt="payment"></a></div>
+                                    src="images/payment/jpg/04.jpg" alt="payment"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+        </div>
+</footer>

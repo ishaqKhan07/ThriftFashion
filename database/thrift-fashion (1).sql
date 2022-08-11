@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 11, 2022 at 01:00 AM
+-- Host: localhost:3306
+-- Generation Time: Aug 11, 2022 at 05:34 PM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.15
+-- PHP Version: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,13 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `brand`
+-- Table structure for table `brands`
 --
 
-CREATE TABLE `brand` (
+CREATE TABLE `brands` (
   `id` int(11) NOT NULL,
-  `brand_id` int(11) NOT NULL
+  `name` varchar(200) NOT NULL,
+  `image` varchar(200) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `brands`
+--
+
+INSERT INTO `brands` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'test', '1660238661.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'test', '1660238677.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'khan', '1660238804.jpg', '2022-08-11 17:26:44', '2022-08-11 17:26:44');
 
 -- --------------------------------------------------------
 
@@ -191,7 +203,7 @@ CREATE TABLE `quick_links` (
 --
 
 INSERT INTO `quick_links` (`id`, `facebook`, `twitter`, `instagram`, `linkedin`, `pinterest`) VALUES
-(1, 'www.facebook.comm', 'www.twitter.com', 'www.instagram.com', 'www.linkedin.com', 'www.pinterest.com');
+(1, 'www.facebook.comm', 'www.twitter.com', 'www.instagram.com', 'www.linkedin.com', 'www.pinterest.comm');
 
 -- --------------------------------------------------------
 
@@ -226,9 +238,9 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `brand`
+-- Indexes for table `brands`
 --
-ALTER TABLE `brand`
+ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -284,10 +296,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `brand`
+-- AUTO_INCREMENT for table `brands`
 --
-ALTER TABLE `brand`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `brands`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `catagories`

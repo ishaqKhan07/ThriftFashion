@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 $title = 'Seller Reviews';
 include 'header.php';
 
@@ -12,19 +11,14 @@ if(isset($_POST['contact'])){
     $phone = $_POST['phone'];
     $address = $_POST['address'];
 
-    $query = "update contact_setting set support_mail = '$email', phone = $phone ,address = '$address' where id = 1"; 
+    $query = "update contact_setting set support_mail = '$email', phone = $phone ,address = '$address' where id = 1";
     $result = $data->update($query);
 
     if($result){
-?>
-        <script>
-            Swal.fire(
-            'Success!',
-            'Data Updated Successfully!',
-            'success'
-        );
-        </script>
-<?php
+        $_SESSION['flash_success'] = 'Data Updated Successfully!';
+        $script =  <<< JS
+                   location.reload();
+                JS;
     }
 
 }

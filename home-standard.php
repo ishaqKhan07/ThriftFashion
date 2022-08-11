@@ -1,4 +1,6 @@
-<?php include 'header-link.php';
+<?php
+$title = 'Home';
+include 'header-link.php';
 include 'header.php';
 
 
@@ -75,12 +77,11 @@ include 'header.php';
                     <div class="banner-category">
                         <div class="banner-category-head"><i class="fas fa-bars"></i><span>top categories</span></div>
                         <ul class="banner-category-list">
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>TShirts</span></a>
+                            <li class="banner-category-item"><a href="#" > <img src="images/cloths-icon.png" /> &nbsp;&nbsp; <span>TShirts</span></a>
                             </li>
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>Jeans</span></a>
+                            <li class="banner-category-item"><a href="#" > <img src="images/cloths-icon.png" /> &nbsp;&nbsp; <span>Jeans</span></a>
                             </li>
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>Jackets</span></a>
-                            </li>
+                            <li class="banner-category-item"><a href="#" > <img src="images/cloths-icon.png" /> &nbsp;&nbsp; <span>Jackets</span></a>
                             </li>
                         </ul>
                     </div>
@@ -832,6 +833,44 @@ include 'header.php';
             </div>
         </div>
     </section>
-    <?php include 'footer-link.php';
+<?php
+include 'footer-link.php';
 include 'footer.php';
 ?>
+<script>
+        $(document).ready(function(){
+        $('#productSearch').select2({
+            ajax:{
+                url: 'getSelectData.php',
+                type: 'POST',
+                dataType: 'json',
+                delay: 250,
+                data: function(params){
+                    return{
+                        productName : params.term,
+                    };
+                },
+                processResults: function(response){
+                    return{
+                        results: response
+                    };
+                },
+                cache: true
+            }
+
+        });
+    });
+
+        $("#productFilter").on('keyup', function (e) {
+        if (e.key === 'Enter') {
+        var productId = $("#productSearch").val();
+        window.location.replace("viewProduct.php?productId="+productId);
+    }
+    });
+
+        $("#productFilter").submit(function (){
+        event.preventDefault();
+        var productId = $("#productSearch").val();
+        window.location.replace("viewProduct.php?productId="+productId);
+    });
+</script>
