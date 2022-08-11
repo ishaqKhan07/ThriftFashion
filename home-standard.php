@@ -1,6 +1,7 @@
 <?php include 'header-link.php';
 include 'header.php';
 
+$feedback = $data->select('select * from feedback limit 5');
 
 ?>
 <link rel="stylesheet" href="css/home-standard.css">
@@ -700,11 +701,15 @@ include 'header.php';
                 </div>
             </div>
             <div class="row">
+                <?php while ($row = $data->fetch_assoc()) {?>
                 <div class="col-lg-12">
+                
                     <div class="testimonial-slider slider-arrow">
                         <div class="testimonial-card"><i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
+                            <p>
+                            <?php echo $feedback['username']; ?>
+                            </p>
+                            <h5><?php echo $feedback['feedback']; ?></h5>
                             <ul>
                                 <li class="fas fa-star"></li>
                                 <li class="fas fa-star"></li>
@@ -713,41 +718,10 @@ include 'header.php';
                                 <li class="fas fa-star"></li>
                             </ul><img src="images/avatar/01.jpg" alt="testimonial">
                         </div>
-                        <div class="testimonial-card"><i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul><img src="images/avatar/02.jpg" alt="testimonial">
-                        </div>
-                        <div class="testimonial-card"><i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul><img src="images/avatar/03.jpg" alt="testimonial">
-                        </div>
-                        <div class="testimonial-card"><i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul><img src="images/avatar/04.jpg" alt="testimonial">
-                        </div>
                     </div>
+                    
                 </div>
+                <?php }?>
             </div>
         </div>
     </section>
@@ -817,21 +791,7 @@ include 'header.php';
             </div>
         </div>
     </section>
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-lg-6 col-xl-7">
-                    <div class="news-text">
-                        <h2>Get 20% Discount for Subscriber</h2>
-                        <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
-                    </div>
-                </div>
-                <div class="col-md-7 col-lg-6 col-xl-5">
-                    <form class="news-form"><input type="text" placeholder="Enter Your Email Address"><button><span><i class="icofont-ui-email"></i>Subscribe</span></button></form>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <?php include 'footer-link.php';
 include 'footer.php';
 ?>
