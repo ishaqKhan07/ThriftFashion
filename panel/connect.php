@@ -12,6 +12,11 @@ class db{
         $this->conn = $conn;
     }
 
+    public function add($query){
+        $result = $this->conn->query($query);
+        return $result;
+    }
+
     public function select($query){
         $result = $this->conn->query($query);        
         $data = mysqli_fetch_assoc($result);
@@ -21,7 +26,9 @@ class db{
     public function update($query){
         $result = $this->conn->query($query);        
         return $result;                                                      
-    } 
+    }
+
+
 }   
 
 

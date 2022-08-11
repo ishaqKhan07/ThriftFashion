@@ -1,18 +1,18 @@
 .customer-wrapper .content-wrapper h4 {
     color: #000000;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 30px;
     font-family: 'Poppins';
 }
 .dashboard .customer-wrapper th {
-    font-size: 12px;
+    font-size: 1rem;
     font-family: 'Poppins';
     font-weight: 600;
 }
 .dashboard .customer-wrapper td {
     font-weight: 300;
-    font-size: 12px;
+    font-size: 1rem;
     font-family: 'Poppins';
     color: #000;
 }

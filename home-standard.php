@@ -1,4 +1,6 @@
-<?php include 'header-link.php';
+<?php
+$title = 'Home';
+include 'header-link.php';
 include 'header.php';
 
 $feedback = $data->select('select * from feedback limit 5');
@@ -76,12 +78,11 @@ $feedback = $data->select('select * from feedback limit 5');
                     <div class="banner-category">
                         <div class="banner-category-head"><i class="fas fa-bars"></i><span>top categories</span></div>
                         <ul class="banner-category-list">
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>TShirts</span></a>
+                            <li class="banner-category-item"><a href="#" > <img src="images/cloths-icon.png" /> &nbsp;&nbsp; <span>TShirts</span></a>
                             </li>
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>Jeans</span></a>
+                            <li class="banner-category-item"><a href="#" > <img src="images/cloths-icon.png" /> &nbsp;&nbsp; <span>Jeans</span></a>
                             </li>
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>Jackets</span></a>
-                            </li>
+                            <li class="banner-category-item"><a href="#" > <img src="images/cloths-icon.png" /> &nbsp;&nbsp; <span>Jackets</span></a>
                             </li>
                         </ul>
                     </div>
@@ -791,7 +792,64 @@ $feedback = $data->select('select * from feedback limit 5');
             </div>
         </div>
     </section>
+<<<<<<< HEAD
     
     <?php include 'footer-link.php';
+=======
+    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 col-lg-6 col-xl-7">
+                    <div class="news-text">
+                        <h2>Get 20% Discount for Subscriber</h2>
+                        <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-6 col-xl-5">
+                    <form class="news-form"><input type="text" placeholder="Enter Your Email Address"><button><span><i class="icofont-ui-email"></i>Subscribe</span></button></form>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php
+include 'footer-link.php';
+>>>>>>> 27690e51a4ce0768bf5733aacbc1472e1c83c836
 include 'footer.php';
 ?>
+<script>
+        $(document).ready(function(){
+        $('#productSearch').select2({
+            ajax:{
+                url: 'getSelectData.php',
+                type: 'POST',
+                dataType: 'json',
+                delay: 250,
+                data: function(params){
+                    return{
+                        productName : params.term,
+                    };
+                },
+                processResults: function(response){
+                    return{
+                        results: response
+                    };
+                },
+                cache: true
+            }
+
+        });
+    });
+
+        $("#productFilter").on('keyup', function (e) {
+        if (e.key === 'Enter') {
+        var productId = $("#productSearch").val();
+        window.location.replace("viewProduct.php?productId="+productId);
+    }
+    });
+
+        $("#productFilter").submit(function (){
+        event.preventDefault();
+        var productId = $("#productSearch").val();
+        window.location.replace("viewProduct.php?productId="+productId);
+    });
+</script>

@@ -1,5 +1,6 @@
 <?php 
     include 'connect.php';
+    session_start();
     $data = new db();
 ?>
 
@@ -112,7 +113,7 @@
                                 <a href="seller-customer.php" class="nav-link">Customer</a>
                             </li>
                             <li class="nav-item">
-                                <a href="seller-leads.php" class="nav-link">Leads</a>
+                                <a href="brands.php" class="nav-link">Brands</a>
                             </li>
                             <li class="nav-item">
                                 <a href="seller-reviews.php" class="nav-link">Reviews & Feedback</a>

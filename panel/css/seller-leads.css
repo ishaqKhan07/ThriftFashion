@@ -3,10 +3,10 @@
   padding: 20px;
 }
 .dashboard button.add-labels {
-  font-size: 12px;
+  font-size: 1rem;
   background: #07a8c4;
   border: none;
-  padding: 4px 21px;
+  padding: 7px 21px;
   margin-bottom: 30px;
   color: #ffffff;
   font-weight: 500;
