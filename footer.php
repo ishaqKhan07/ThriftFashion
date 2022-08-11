@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 <?php
 
+$conn = new mysqli('localhost', 'root', '','thrift-fashion');
 if (isset($_POST['subscribe'])) {
     $email=$_POST['email'];
     
-    $sub="INSERT INTO `newsletter`
-        ( `email`) VALUES
-        ('$email')";
-        mysqli_query($connect,$sub);
+    $sub = mysqli_query($conn,"INSERT INTO `newsletter` (`email`) VALUES ('$email')");
 }    
-
-
-
 ?>
 <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
         <div class="container">
@@ -74,8 +68,6 @@ if (isset($_POST['subscribe'])) {
             </div>
         </div>
     </section>
-=======
->>>>>>> 27690e51a4ce0768bf5733aacbc1472e1c83c836
 <footer class="footer-part">
         <div class="container">
             <div class="row">

@@ -36,7 +36,7 @@ if(isset($_POST['addBrand'])){
 
 
     if($uploadOk == 1){
-        if (move_uploaded_file($_FILES["image"]["tmp_name"], $org_file)) {
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
 
             $add = $data->add("insert into brands (`name`,`image`) values ('$name' , '$org_file') ");
             if($add){
@@ -83,11 +83,12 @@ if(isset($_POST['addBrand'])){
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <?php while($brand = mysqli_fetch_assoc($brands)){ ?>
+                            <?php 
+                                while ($brand = $brands->fetch_assoc()) { ?>
+                                    <tr>
                                         <td><?= $brand['id']; ?></td>
                                         <td><?= $brand['name']; ?></td>
-                                        <td><img src=../images/"<?= $brand['image']; ?>"></td>
+                                        <td><img src="images/<?= $brand['image']; ?>"></td>
                                         <td><?= $brand['created_at']; ?></td>
                                         <td><?= $brand['updated_at']; ?></td>
                                         <td>
@@ -100,8 +101,8 @@ if(isset($_POST['addBrand'])){
                                                 </button>
                                             </div>
                                         </td>
-                                    <?php } ?>
-                                </tr>
+                                    </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

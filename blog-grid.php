@@ -1,4 +1,6 @@
-<?php include 'header-link.php';
+<?php 
+$title = 'Blog';
+include 'header-link.php';
 include 'header.php';
 ?>
 <link rel="stylesheet" href="css/blog-grid.css">

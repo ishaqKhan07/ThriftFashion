@@ -1,7 +1,6 @@
 <?php include 'header-link.php';
 include 'header.php';
 
-
 $nameError=$emailError = null;
 if (isset($_POST['send'])) {
 $name=$_POST['name'];
@@ -56,24 +55,29 @@ $query="INSERT INTO `contact`
     <section class="inner-section contact-part">
         <div class="container">
             <div class="row">
+            <?php
+                while ($con = mysqli_fetch_assoc($contactSettings)){
+            ?>
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card"><i class="icofont-location-pin"></i>
                         <h4>head office</h4>
-                        <p><?= $contact['support_mail'] ?></p>
+                        <p><?= $con['support_mail'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card active"><i class="icofont-phone"></i>
                         <h4>phone number</h4>
-                        <p><?= $contact['phone'] ?></p>
+                        <p><?= $con['phone'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card"><i class="icofont-email"></i>
                         <h4>Support mail</h4>
-                        <p><?= $contact['address'] ?></p>
+                        <p><?= $con['address'] ?></p>
                     </div>
                 </div>
+
+            <?php } ?>
             </div>
             <div class="row">
                 <div class="col-lg-6">
@@ -112,26 +116,8 @@ $query="INSERT INTO `contact`
            
         </div>
     </section>
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-lg-6 col-xl-7">
-                    <div class="news-text">
-                        <h2>Get 20% Discount for Subscriber</h2>
-                        <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
-                    </div>
-                </div>
-                <div class="col-md-7 col-lg-6 col-xl-5">
-                    <form class="news-form" method="POST">
-                        <input type="email" name="email" placeholder="Enter Your Email Address">
-                    <button type="submit" name="subscribe"><span>
-                        <i class="icofont-ui-email"></i>Subscribe</span></button>
-                                </form>
-                </div>
-            </div>
-        </div>
-    </section>
     
-    <?php include 'footer-link.php';
+<?php
+ include 'footer-link.php';
 include 'footer.php';
 ?>

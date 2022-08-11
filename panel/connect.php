@@ -19,8 +19,7 @@ class db{
 
     public function select($query){
         $result = $this->conn->query($query);        
-        $data = mysqli_fetch_assoc($result);
-        return $data;                                                      
+        return $result;                                                      
     }    
 
     public function update($query){

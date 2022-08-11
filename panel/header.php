@@ -7,8 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="UTF-8">
@@ -110,21 +108,20 @@
                                 <a href="seller-home.php" class="nav-link">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a href="seller-customer.php" class="nav-link">Customer</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="brands.php" class="nav-link">Brands</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="seller-reviews.php" class="nav-link">Reviews & Feedback</a>
+                                <a href="seller-customer.php" class="nav-link">Customers</a>
                             </li>
                             <li class="nav-item">
                                 <a href="seller-products.php" class="nav-link">Products</a>
                             </li>
                             <li class="nav-item">
+                                <a href="brands.php" class="nav-link">Brands</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="seller-orders.php" class="nav-link">My Orders</a>
                             </li>
-                            
+                            <li class="nav-item">
+                                <a href="seller-reviews.php" class="nav-link">Reviews & Feedback</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Aug 11, 2022 at 05:34 PM
+-- Host: 127.0.0.1
+-- Generation Time: Aug 12, 2022 at 01:21 AM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.19
+-- PHP Version: 8.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,12 @@ CREATE TABLE `brands` (
 INSERT INTO `brands` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
 (1, 'test', '1660238661.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'test', '1660238677.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 'khan', '1660238804.jpg', '2022-08-11 17:26:44', '2022-08-11 17:26:44');
+(3, 'khan', '1660238804.jpg', '2022-08-11 17:26:44', '2022-08-11 17:26:44'),
+(0, 'wdqd', '1660253985.png', '2022-08-11 21:39:45', '2022-08-11 21:39:45'),
+(0, 'wdqd', '1660253990.png', '2022-08-11 21:39:50', '2022-08-11 21:39:50'),
+(0, 'ishaq', '1660255061.png', '2022-08-11 21:57:41', '2022-08-11 21:57:41'),
+(0, 'rwer', '1660255205.png', '2022-08-11 22:00:05', '2022-08-11 22:00:05'),
+(0, 'rwer', '1660255211.png', '2022-08-11 22:00:11', '2022-08-11 22:00:11');
 
 -- --------------------------------------------------------
 
@@ -130,6 +135,14 @@ CREATE TABLE `feedback` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`user_id`, `username`, `feedback`, `created_at`) VALUES
+(12, 'wqdwqd', 'qwdqwd', '2022-08-11 20:51:02'),
+(1231, 'qwdwqd', 'wqdwqd', '2022-08-11 20:51:02');
+
 -- --------------------------------------------------------
 
 --
@@ -146,7 +159,9 @@ CREATE TABLE `newsletter` (
 --
 
 INSERT INTO `newsletter` (`id`, `email`) VALUES
-(1, 'nim9869@gmail.com');
+(1, 'nim9869@gmail.com'),
+(2, 'ishaqkhan0023@gmail.com'),
+(3, 'thrift.support@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -179,6 +194,7 @@ CREATE TABLE `products` (
   `description` text NOT NULL,
   `image` varchar(120) NOT NULL,
   `price` int(10) NOT NULL,
+  `stock` int(50) NOT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -203,7 +219,7 @@ CREATE TABLE `quick_links` (
 --
 
 INSERT INTO `quick_links` (`id`, `facebook`, `twitter`, `instagram`, `linkedin`, `pinterest`) VALUES
-(1, 'www.facebook.comm', 'www.twitter.com', 'www.instagram.com', 'www.linkedin.com', 'www.pinterest.comm');
+(1, 'www.facebook.comm', 'www.twitter.com', 'www.instagram.com', 'www.linkedin.com', 'www.pinterest.com');
 
 -- --------------------------------------------------------
 
@@ -227,6 +243,7 @@ CREATE TABLE `users` (
   `role_id` int(11) NOT NULL,
   `name` text NOT NULL,
   `email` text NOT NULL,
+  `image` varchar(200) NOT NULL,
   `password` text NOT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -236,12 +253,6 @@ CREATE TABLE `users` (
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `brands`
---
-ALTER TABLE `brands`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `catagories`
@@ -260,6 +271,12 @@ ALTER TABLE `contact_setting`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orders`
@@ -296,12 +313,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `brands`
---
-ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `catagories`
 --
 ALTER TABLE `catagories`
@@ -317,7 +328,13 @@ ALTER TABLE `contact_setting`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1232;
+
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orders`

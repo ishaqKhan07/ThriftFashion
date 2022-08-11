@@ -6,13 +6,13 @@
     font-family: 'Poppins';
 }
 .dashboard .customer-wrapper th {
-    font-size: 1rem;
+    font-size: 15px;
     font-family: 'Poppins';
     font-weight: 600;
 }
 .dashboard .customer-wrapper td {
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 14px;
     font-family: 'Poppins';
     color: #000;
 }

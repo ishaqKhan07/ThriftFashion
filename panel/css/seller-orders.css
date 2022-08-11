@@ -97,7 +97,7 @@
 }
 .sellers_orders {
   background: #b1b1b11f;
-  padding: 40px 40px;
+  padding: 30px 20px;
 }
 .sellers_orders tr th {
   border: 0;
@@ -117,7 +117,7 @@
   font-family: "Poppins";
 }
 .sellers_orders th {
-  font-size: 12px;
+  font-size: 15px;
   color: #000000;
   font-family: "Poppins";
   font-weight: 600;
