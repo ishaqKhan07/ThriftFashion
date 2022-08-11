@@ -1,6 +1,5 @@
 <?php
-$contact = $data->select('select * from contact_setting');
-$links = $data->select('select * from quick_links');
+
 
 
 
@@ -14,11 +13,11 @@ $links = $data->select('select * from quick_links');
                         <p class="footer-desc">Adipisci asperiores ipsum ipsa repellat consequatur repudiandae quisquam
                             assumenda dolor perspiciatis sit ipsum dolor amet.</p>
                         <ul class="footer-social">
-                            <li><a class="icofont-facebook" href="#"></a></li>
-                            <li><a class="icofont-twitter" href="#"></a></li>
-                            <li><a class="icofont-linkedin" href="#"></a></li>
-                            <li><a class="icofont-instagram" href="#"></a></li>
-                            <li><a class="icofont-pinterest" href="#"></a></li>
+                            <li><a class="icofont-facebook" href="<?= $links['facebook'] ?>"></a></li>
+                            <li><a class="icofont-twitter" href="<?= $links['twitter'] ?>"></a></li>
+                            <li><a class="icofont-linkedin" href="<?= $links['linkedin'] ?>"></a></li>
+                            <li><a class="icofont-instagram" href="<?= $links['instagram'] ?>"></a></li>
+                            <li><a class="icofont-pinterest" href="<?= $links['pinterest'] ?>"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -27,13 +26,13 @@ $links = $data->select('select * from quick_links');
                         <h3 class="footer-title">contact us</h3>
                         <ul class="footer-contact">
                             <li><i class="icofont-ui-email"></i>
-                                <p><span>support@example.com</span><span>carrer@example.com</span></p>
+                                <p><?= $contact['support_mail'] ?></p>
                             </li>
                             <li><i class="icofont-ui-touch-phone"></i>
-                                <p><span>+120 279 532 13</span><span>+120 279 532 14</span></p>
+                                <p><?= $contact['phone'] ?></p>
                             </li>
                             <li><i class="icofont-location-pin"></i>
-                                <p>1Hd- 50, 010 Avenue, NY 90001 United States</p>
+                                <p>1<?= $contact['address'] ?></p>
                             </li>
                         </ul>
                     </div>
