@@ -49,7 +49,7 @@ include 'header.php'
                     <!-- seller dashboard stats ends here -->
                 </div>
                 <div class="row">
-                    <div class="col-lg-9">
+                    <div class="col-lg-12">
                         <div class="recent-orders-wrapper">
                             <div class="content-wrapper">
                                 <h5>Recent Orders</h5>
@@ -106,74 +106,6 @@ include 'header.php'
                             </div>
                             <div class="button-wrapper">
                                 <a class="text-right" href="#">See All</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="rating-wrapper">
-                            <div class="content-wrapper">
-                                <h4>Customer Reviews</h4>
-                                <div class="stars-wrapper">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i>
-                                        </li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i>
-                                        </li>
-
-                                        <li><i class="fa fa-star" aria-hidden="true"></i>
-                                        </li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i>
-                                        </li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </li>
-                                    </ul>
-                                    <h6>4 out of 5</h6>
-                                </div>
-                                <div class="progress-bar-wrapper">
-                                    <h4>5 Star</h4>
-                                    <div class="total-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="total-progre">24%</span>
-                                    </div>
-                                    <h4>4 Star</h4>
-                                    <div class="total-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 75%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="total-progre">24%</span>
-                                    </div>
-                                    <h4>3 Star</h4>
-                                    <div class="total-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="total-progre">24%</span>
-                                    </div>
-                                    <h4>2 Star</h4>
-                                    <div class="total-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 20%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="total-progre">24%</span>
-                                    </div>
-                                    <h4>1 Star</h4>
-                                    <div class="total-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 10%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="total-progre">24%</span>
-                                    </div>
-                                    <div class="button-wrapper">
-                                        <a class="text-right" href="#">See All</a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

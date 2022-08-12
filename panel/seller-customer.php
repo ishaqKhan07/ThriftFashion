@@ -5,7 +5,6 @@ include 'header.php';
 
 
 $users = $data->select("select * from users where role_id = 2");
-
 ?>
 
 
@@ -22,7 +21,7 @@ $users = $data->select("select * from users where role_id = 2");
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Id</th>
+                                <th scope="col">Id</th>
                                     <th>Image</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
@@ -31,8 +30,8 @@ $users = $data->select("select * from users where role_id = 2");
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                while ($user = $users->fetch_assoc()){ ?>
+                                <?php
+                                    while ($user = $users->fetch_assoc()){ ?>
                                 <tr>
                                     <td><?= $user['id']; ?></td>
                                     <td><img width="50" height="50" src="../images/<?= $user['image']; ?>"/></td>
@@ -41,8 +40,8 @@ $users = $data->select("select * from users where role_id = 2");
                                     <td><?= $user['created_at']; ?></td>
                                     <td><?= $user['updated_at']; ?></td>
                                 </tr>
+
                                 <?php } ?>
-                            </tbody>
                         </table>
                     </div>
                 </div>

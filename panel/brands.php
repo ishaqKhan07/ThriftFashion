@@ -9,7 +9,7 @@ $imageError = '';
 if(isset($_POST['addBrand'])){
     $name = $_POST['name'];
 
-    $target_dir = "../images/";
+    $target_dir = "../images/brands/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -21,12 +21,6 @@ if(isset($_POST['addBrand'])){
         $uploadOk = 0;
     }
     if($uploadOk == 1){
-        if ($_FILES["image"]["size"] > 500000) {
-            $imageError = "Sorry, your file is too large.";
-            $uploadOk = 0;
-        }
-    }
-    if($uploadOk == 1){
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
             $imageError =  "Sorry, only JPG, JPEG & PNG & GIF files are allowed.";
             $uploadOk = 0;
@@ -36,7 +30,7 @@ if(isset($_POST['addBrand'])){
 
 
     if($uploadOk == 1){
-        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $org_file)) {
 
             $add = $data->add("insert into brands (`name`,`image`) values ('$name' , '$org_file') ");
             if($add){

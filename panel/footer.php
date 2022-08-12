@@ -27,9 +27,11 @@
 </script>
 <script src="../../cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
-
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
 <script src="js/scripts.js"></script>
 <script src="js/ckeditor.js"></script>
+
 
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script>
@@ -49,6 +51,11 @@
 </script>
 
 <script>
+
+$(document).ready( function () {
+        $('#myTable').DataTable();
+    
+} );
     // Active js 
     const CurrentLocation = location.href;
     const menuItem = document.querySelectorAll('.nav-bar ul li a');

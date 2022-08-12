@@ -195,7 +195,7 @@ $data = $data->select("select * from feedback limit 5");
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="countdown deals-clock" data-countdown="2022/12/22"><span class="countdown-time"><span>00</span><small>days</small></span><span class="countdown-time"><span>00</span><small>hours</small></span><span class="countdown-time"><span>00</span><small>minutes</small></span><span class="countdown-time"><span>00</span><small>seconds</small></span></div>
+                    <div class="countdown deals-clock" data-countdown="2022/8/22"><span class="countdown-time"><span>00</span><small>days</small></span><span class="countdown-time"><span>00</span><small>hours</small></span><span class="countdown-time"><span>00</span><small>minutes</small></span><span class="countdown-time"><span>00</span><small>seconds</small></span></div>
                 </div>
             </div>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">

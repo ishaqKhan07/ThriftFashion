@@ -45,18 +45,6 @@ if(isset($_POST['link'])){
         <?php
     }
 }
-
-// if(isset($_POST['contact'])){
-//     $email = $_POST['email'];
-//     $phone = $_POST['phone'];
-//     $address = $_POST['address'];
-
-//     $query = "update contact_setting set support_mail = '$email', phone = $phone ,address = '$address' where id = 1"; 
-//     $result = $data->update($query);
-
-// }
-
-
 ?>
 
 
@@ -71,8 +59,7 @@ if(isset($_POST['link'])){
                                 <h4>Contact Information</h4>
                             </div>
                             <form method='post' class="w-100">
-                                <label>Support Email</label>
-                                <input type="email" name="email" value="<?= $contact['support_mail'] ?>" class="form-control mb-2"/>
+                                <label>Support Email</label>lil" name="email" value="<?= $contact['support_mail'] ?>" class="form-control mb-2"/>
 
                                 <label>Phone Number</label>
                                 <input type="text" name="phone" value="<?= $contact['phone'] ?>" class="form-control mb-2"/>

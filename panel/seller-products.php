@@ -5,27 +5,58 @@ include 'header.php';
 $brands = $data->select('select * from brands');
 $product_categories = $data->select('select * from product_categories');
 
-
+$imageError = '';
  if(isset($_POST['addBrand'])){
     $name=$_POST['name'];
-    $catagory_id=$_POST['catagory_id'];
-    $brand_id=$_POST['brand_id'];
+    $catagory=$_POST['category_id'];
+    $brand= $_POST['brand_id'];
     $description=$_POST['description'];
-    $stock=$_POST['stock'];
-    $img= $_FILES['image'];
+    $stock = $_POST['stock'];
+    $price = $_POST['price'];
 
-    $ds="images/$img";
-    
+    $target_dir = "../images/product/";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $org_file  = time().'.'.$imageFileType;
 
-    move_uploaded_file($src, $ds);
+    $check = getimagesize($_FILES["image"]["tmp_name"]);
+    if($check == false) {
+        $imageError = "File is not an image.";
+        $uploadOk = 0;
+    }
+    if($uploadOk == 1){
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+            $imageError =  "Sorry, only JPG, JPEG & PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+    }
 
-    $q= "INSERT INTO `products`(`name` , `catagory_id` , `brand_id` , `description` , `stock` , `Image`) VALUES 
-    ('$name','$catagory_id','$brand_id','$descripton','$stock','$ds')";
-    mysqli_query($con,$q);
+
+    if($uploadOk == 1){
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+
+            $add = $data->add("INSERT INTO `products`(`name` , `category_id` , `brand_id` , `description` , `stock` , `price`, `Image`) VALUES 
+            ('$name','$catagory','$brand','$description','$stock', '$price', '$org_file')");
+        //    die($add);
+           if($add){
+                $_SESSION['flash_success'] = 'Product Added Successfully!';
+                $script =  <<< JS
+                   location.reload();
+                JS;
+            }
+
+        } else {
+            $imageError =  "Sorry, there was an error uploading your file.";
+        }
+    }
 }
 ?>
 <section class="dashboard">
     <div class="container-fluid">
+        <?php if(!empty($imageError)){ ?>
+            <div class="alert alert-danger"><?= $imageError; ?></div>
+        <?php } ?>
         <div class="row">
             <div class="col-12">
                 <div class="sellers_orders">
@@ -35,7 +66,7 @@ $product_categories = $data->select('select * from product_categories');
                     </div>
                     <div class="add-upload-wrapper">
                         <button type="button" class="btn add-labels" data-toggle="modal" data-target="#exampleModal">
-                            Add Brand
+                            Add Products
                         </button>
                     </div>
                     <table class="table" id="myTable">
@@ -55,184 +86,9 @@ $product_categories = $data->select('select * from product_categories');
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="orderid">Active</td>
-                                <td class="billingname">Koizuma Massage Gun </td>
-                                <td class="amount">CA12345</td>
-                                <td class="items">
-                                    <img src="img/products-table-img.png" class="pro-table-img" alt="">
-                                </td>
-                                <td class="shipmentstatus">Mon 11 July</td>
-                                <td class="details">$300 </td>
-                                <td class="Available">10 </td>
-                                <td class="Boost"> <button class="btn boost-btn" type="button" data-toggle="modal"
-                                        data-target="#exampleModalCenter">Boost</button> </td>
-                                <td class="Detailsu"><button class="btn details-btn">View Details</button> </td>
-                                <td class="Detailsu">
-                                    <div class="button-wrap">
-                                        <button class="edit">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </button>
-                                        <button class="edit">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="orderid">Active</td>
-                                <td class="billingname">Koizuma Massage Gun </td>
-                                <td class="amount">CA12345</td>
-                                <td class="items">
-                                    <img src="img/products-table-img.png" class="pro-table-img" alt="">
-                                </td>
-                                <td class="shipmentstatus">Mon 11 July</td>
-                                <td class="details">$300 </td>
-                                <td class="Available">10 </td>
-                                <td class="Boost"> <button class="btn boost-btn">Boost</button> </td>
-                                <td class="Detailsu"><button class="btn details-btn">View Details</button> </td>
-                                <td class="Detailsu">
-                                    <div class="button-wrap">
-                                        <button class="edit">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </button>
-                                        <button class="edit">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="orderid">Active</td>
-                                <td class="billingname">Koizuma Massage Gun </td>
-                                <td class="amount">CA12345</td>
-                                <td class="items">
-                                    <img src="img/products-table-img.png" class="pro-table-img" alt="">
-                                </td>
-                                <td class="shipmentstatus">Mon 11 July</td>
-                                <td class="details">$300 </td>
-                                <td class="Available">10 </td>
-                                <td class="Boost"> <button class="btn boost-btn">Boost</button> </td>
-                                <td class="Detailsu"><button class="btn details-btn">View Details</button> </td>
-                                <td class="Detailsu">
-                                    <div class="button-wrap">
-                                        <button class="edit">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </button>
-                                        <button class="edit">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="orderid">Active</td>
-                                <td class="billingname">Koizuma Massage Gun </td>
-                                <td class="amount">CA12345</td>
-                                <td class="items">
-                                    <img src="img/products-table-img.png" class="pro-table-img" alt="">
-                                </td>
-                                <td class="shipmentstatus">Mon 11 July</td>
-                                <td class="details">$300 </td>
-                                <td class="Available">10 </td>
-                                <td class="Boost"> <button class="btn boost-btn">Boost</button> </td>
-                                <td class="Detailsu"><button class="btn details-btn">View Details</button> </td>
-                                <td class="Detailsu">
-                                    <div class="button-wrap">
-                                        <button class="edit">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </button>
-                                        <button class="edit">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="orderid">Active</td>
-                                <td class="billingname">Koizuma Massage Gun </td>
-                                <td class="amount">CA12345</td>
-                                <td class="items">
-                                    <img src="img/products-table-img.png" class="pro-table-img" alt="">
-                                </td>
-                                <td class="shipmentstatus">Mon 11 July</td>
-                                <td class="details">$300 </td>
-                                <td class="Available">10 </td>
-                                <td class="Boost"> <button class="btn boost-btn">Boost</button> </td>
-                                <td class="Detailsu"><button class="btn details-btn">View Details</button> </td>
-                                <td class="Detailsu">
-                                    <div class="button-wrap">
-                                        <button class="edit">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </button>
-                                        <button class="edit">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="orderid">Active</td>
-                                <td class="billingname">Koizuma Massage Gun </td>
-                                <td class="amount">CA12345</td>
-                                <td class="items">
-                                    <img src="img/products-table-img.png" class="pro-table-img" alt="">
-                                </td>
-                                <td class="shipmentstatus">Mon 11 July</td>
-                                <td class="details">$300 </td>
-                                <td class="Available">10 </td>
-                                <td class="Boost"> <button class="btn boost-btn">Boost</button> </td>
-                                <td class="Detailsu"><button class="btn details-btn">View Details</button> </td>
-                                <td class="Detailsu">
-                                    <div class="button-wrap">
-                                        <button class="edit">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </button>
-                                        <button class="edit">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="orderid">Active</td>
-                                <td class="billingname">Koizuma Massage Gun </td>
-                                <td class="amount">CA12345</td>
-                                <td class="items">
-                                    <img src="img/products-table-img.png" class="pro-table-img" alt="">
-                                </td>
-                                <td class="shipmentstatus">Mon 11 July</td>
-                                <td class="details">$300 </td>
-                                <td class="Available">10 </td>
-                                <td class="Boost"> <button class="btn boost-btn">Boost</button> </td>
-                                <td class="Detailsu"><button class="btn details-btn">View Details</button> </td>
-                                <td class="Detailsu">
-                                    <div class="button-wrap">
-                                        <button class="edit">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </button>
-                                        <button class="edit">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+
                         </tbody>
-                    </table>
-                    <div class="paginations_results">
-                        <div class="showing_results">
-                            <p>Showing <b>7</b> of over 50 <b>results</b></p>
-                        </div>
-                        <ul class="paginations">
-                            <li class="arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-                            <li class="pagi">1</li>
-                            <li class="pagi">2</li>
-                            <li class="pagi">3</li>
-                            <li class="pagi">..</li>
-                            <li class="pagi">90</li>
-                            <li class="arrow right-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                        </ul>
-                    </div>
+                    </table>    
                 </div>
             </div>
         </div>
@@ -243,13 +99,14 @@ $product_categories = $data->select('select * from product_categories');
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+        <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Products</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <div class="modal-body">
-                <h4 class="">Add product</h4>
-                <form action="https://demos-clients-websites.com/monkey-market/seller-payment.php">
+                <form method="post" enctype="multipart/form-data">
                     <div class="modal-body">
                         <label>Name</label>
                         <input type="text" name="name" class="form-control" required value="">
@@ -262,9 +119,9 @@ $product_categories = $data->select('select * from product_categories');
                         </select>
 
                         <label>Select Brand</label>
-                        <select class="form-control" name="brand" id="">
+                        <select class="form-control" name="brand_id" id="">
                             <?php while($brand =  $brands->fetch_assoc()){ ?>
-                            <option value="<?= $brand['id'] ?>"><?= $brand['name'] ?></option>
+                                <option value="<?= $brand['id'] ?>"><?= $brand['name'] ?></option>
                            <?php } ?> 
                         </select>
                         <label>Description</label>
@@ -290,3 +147,18 @@ $product_categories = $data->select('select * from product_categories');
     </div>
 </div>
 <?php include 'footer.php'?>
+<script>
+    $(document).ready( function () {
+        var table = 'products';
+        $.ajax({  
+        type: "GET",
+        url: "data.php",
+        dataType: JSON,                
+        data:  { tablee: table},              
+        success: function(response){                    
+            $("#responsecontainer").html(response); 
+            //alert(response);
+        }
+    });
+});
+</script>

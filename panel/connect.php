@@ -14,9 +14,9 @@ class db{
 
     public function add($query){
         $result = $this->conn->query($query);
-        return $result;
+        return $query;
     
-}
+    }
 
     public function select($query){
         $result = $this->conn->query($query);        

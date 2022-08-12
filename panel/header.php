@@ -43,6 +43,7 @@
 <link rel="stylesheet" href="css/seller-orders.css">
 <link rel="stylesheet" href="css/seller-earning-report.css">
 <link rel="stylesheet" href="css/seller-leads.css">
+<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -124,16 +125,6 @@
                             </li>
                             <li class="nav-item">
                                 <a href="seller-reviews.php" class="nav-link">Reviews & Feedback</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Reports
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="seller-order-report.php">Order Reports</a>
-                                    <a class="dropdown-item" href="seller-earning-report.php">Earning Reports</a>
-                                </div>
                             </li>
 
                             <li class="nav-item">
