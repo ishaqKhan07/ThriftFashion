@@ -1,12 +1,34 @@
 <?php
 $title = "Products";
- include 'header.php'
- ?>
+include 'header.php';
+
+$brands = $data->select('select * from brands');
+$product_categories = $data->select('select * from product_categories');
+
+
+ if(isset($_POST['addBrand'])){
+    $name=$_POST['name'];
+    $catagory_id=$_POST['catagory_id'];
+    $brand_id=$_POST['brand_id'];
+    $description=$_POST['description'];
+    $stock=$_POST['stock'];
+    $img= $_FILES['image'];
+
+    $ds="images/$img";
+    
+
+    move_uploaded_file($src, $ds);
+
+    $q= "INSERT INTO `products`(`name` , `catagory_id` , `brand_id` , `description` , `stock` , `Image`) VALUES 
+    ('$name','$catagory_id','$brand_id','$descripton','$stock','$ds')";
+    mysqli_query($con,$q);
+}
+?>
 <section class="dashboard">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-            <div class="sellers_orders">
+                <div class="sellers_orders">
                     <div class="heading_wrapper mb-3">
                         <h4>Products</h4>
 
@@ -14,7 +36,7 @@ $title = "Products";
                     <div class="add-upload-wrapper">
                         <button type="button" class="btn add-labels" data-toggle="modal" data-target="#exampleModal">
                             Add Brand
-                        </button>                 
+                        </button>
                     </div>
                     <table class="table" id="myTable">
                         <thead>
@@ -213,11 +235,11 @@ $title = "Products";
                     </div>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
 </section>
 <!-- seller dashboard-wrapper end here -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -226,24 +248,40 @@ $title = "Products";
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
-                <h4 class="">Boost Product</h4>
+                <h4 class="">Add product</h4>
                 <form action="https://demos-clients-websites.com/monkey-market/seller-payment.php">
-                    <div class="form-check mb-3 mt-3">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Boost Product for 3 days for £1.99
-                        </label>
+                    <div class="modal-body">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" required value="">
+
+                        <label>Select Category</label>
+                        <select class="form-control" name="category_id" id="">
+                            <?php while($cat =  $product_categories->fetch_assoc()){ ?>
+                                <option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option>
+                            <?php } ?> 
+                        </select>
+
+                        <label>Select Brand</label>
+                        <select class="form-control" name="brand" id="">
+                            <?php while($brand =  $brands->fetch_assoc()){ ?>
+                            <option value="<?= $brand['id'] ?>"><?= $brand['name'] ?></option>
+                           <?php } ?> 
+                        </select>
+                        <label>Description</label>
+                        <textarea name="description" class="form-control" required></textarea>
+
+                        <label>Stock</label>
+                        <input type="number" name="stock" class="form-control" required value="">
+
+                        <label>price</label>
+                        <input type="number" name="price" class="form-control" required value="">
+
+                        <label>Image</label>
+                        <input type="file" name="image" class="form-control" required value="">
                     </div>
-                    <div class="form-check mb-4">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                            checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Boost Product for 1 month for £9.99
-                        </label>
-                    </div>
-                    <div class="form-group d-flex">
-                        <button class="btn pay-now " onclick="location.href='seller-payment.html';">Pay Now</button>
-                        <button class="btn cancel">Cancel</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" name="addBrand" class="btn btn-primary">Save changes</button>
                     </div>
                 </form>
             </div>
