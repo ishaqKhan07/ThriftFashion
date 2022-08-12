@@ -1,7 +1,10 @@
 
 <?php 
 $title = 'Seller Reviews';
-include 'header.php'
+include 'header.php';
+
+
+$users = $data->select("select * from users");
 ?>
 
 
@@ -26,10 +29,13 @@ include 'header.php'
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Lorem ipsum</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>example.@gmail.com</td>
-                                    <td>+923456789</td>
+                                <?php 
+                                while ($product_categories = $product_category->fetch_assoc()) { ?>
+                                    <td><?= $product_categories['id']; ?></td>
+                                    <td><?= $product_categories['id']; ?></td>
+                                    <td><?= $product_categories['id']; ?></td>
+                                    <td>+<?= $product_categories['id']; ?></td>
+                                    <?php }?>
                                 </tr>
                                 <tr>
                                     <td>Lorem ipsum</td>

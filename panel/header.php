@@ -117,6 +117,9 @@
                                 <a href="brands.php" class="nav-link">Brands</a>
                             </li>
                             <li class="nav-item">
+                                <a href="product-categories.php" class="nav-link">Product Categories</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="seller-orders.php" class="nav-link">My Orders</a>
                             </li>
                             <li class="nav-item">

@@ -1,64 +1,30 @@
 
 <?php
-$title = 'Brands';
+$title = 'Product Categories';
 include 'header.php';
 
-$brands = $data->select("select * from brands");
-
-$imageError = '';
-if(isset($_POST['addBrand'])){
+$product_category = $data->select("select * from product_categories");
+if(isset($_POST['addCategories'])){
     $name = $_POST['name'];
 
-    $target_dir = "../images/";
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    $org_file  = time().'.'.$imageFileType;
-
-    $check = getimagesize($_FILES["image"]["tmp_name"]);
-    if($check == false) {
-        $imageError = "File is not an image.";
-        $uploadOk = 0;
-    }
-    if($uploadOk == 1){
-        if ($_FILES["image"]["size"] > 500000) {
-            $imageError = "Sorry, your file is too large.";
-            $uploadOk = 0;
+    $add = $data->add("insert into product_categories (`name`) values ('$name')");
+    if($add){
+        if($add){
+            $_SESSION['flash_success'] = 'Category Added Successfully!';
+            $script =  <<< JS
+               location.reload();
+            JS;
         }
     }
-    if($uploadOk == 1){
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-            $imageError =  "Sorry, only JPG, JPEG & PNG & GIF files are allowed.";
-            $uploadOk = 0;
-        }
-    }
-
-
-
-    if($uploadOk == 1){
-        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-
-            $add = $data->add("insert into brands (`name`,`image`) values ('$name' , '$org_file') ");
-            if($add){
-                $_SESSION['flash_success'] = 'Brand Added Successfully!';
-                $script =  <<< JS
-                   location.reload();
-                JS;
-            }
-
-        } else {
-            $imageError =  "Sorry, there was an error uploading your file.";
-        }
-    }
-
+    
 }
 
 if(isset($_POST['update'])){
     $id=$_POST['id'];
     $name=$_POST['name'];
-    $editQuery = $data->select("UPDATE `brands` SET `name` = '$name'  WHERE `id` = '$id'"); 
+    $editQuery = $data->select("UPDATE `product_categories` SET `name` = '$name'  WHERE `id` = '$id'"); 
     if($editQuery){
-            $_SESSION['flash_success'] = 'Brand updated Successfully!';
+            $_SESSION['flash_success'] = 'Category updated Successfully!';
             $script =  <<< JS
                location.reload();
             JS;
@@ -68,9 +34,9 @@ if(isset($_POST['update'])){
 
 if(isset($_POST['delete'])){
     $id=$_POST['id'];
-    $deleteQuery = $data->select("DELETE FROM `brands` WHERE `id` = '$id'");
+    $deleteQuery = $data->select("DELETE FROM `product_categories` WHERE `id` = '$id'");
     if($deleteQuery){
-        $_SESSION['flash_success'] = 'Brand delete Successfully!';
+        $_SESSION['flash_success'] = 'Category delete Successfully!';
         $script =  <<< JS
            location.reload();
         JS;
@@ -81,17 +47,14 @@ if(isset($_POST['delete'])){
 
 <section class="dashboard">
     <div class="container-fluid">
-        <?php if(!empty($imageError)){ ?>
-            <div class="alert alert-danger"><?= $imageError; ?></div>
-        <?php } ?>
         <div class="row">
-
             <div class="col-lg-12">
+
                 <div class="customer-wrapper">
                     <div class="content-wrapper">
-                        <h4>Brands</h4>
+                        <h4>Products Categories</h4>
                         <button type="button" class="btn add-labels" data-toggle="modal" data-target="#exampleModal">
-                            Add Brand
+                            Add Categories
                         </button>
                     </div>
                     <div class="table-responsive">
@@ -100,7 +63,6 @@ if(isset($_POST['delete'])){
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Image</th>
                                     <th scope="col">Created_at</th>
                                     <th scope="col">Updated_at</th>
                                     <th scope="col">Action</th>
@@ -108,19 +70,18 @@ if(isset($_POST['delete'])){
                             </thead>
                             <tbody>
                             <?php 
-                                while ($brand = $brands->fetch_assoc()) { ?>
+                                while ($product_categories = $product_category->fetch_assoc()) { ?>
                                     <tr>
-                                        <td><?= $brand['id']; ?></td>
-                                        <td><?= $brand['name']; ?></td>
-                                        <td><img src="images/<?= $brand['image']; ?>"></td>
-                                        <td><?= $brand['created_at']; ?></td>
-                                        <td><?= $brand['updated_at']; ?></td>
+                                        <td><?= $product_categories['id']; ?></td>
+                                        <td><?= $product_categories['name']; ?></td>
+                                        <td><?= $product_categories['created_at']; ?></td>
+                                        <td><?= $product_categories['updated_at']; ?></td>
                                         <td>
-                                            <a href="#" class="editData" data-id="<?php echo $brand['id']?>" data-name="<?php echo $brand['name']?>"  data-toggle="modal" data-target="#editModal">
+                                            <a href="#" class="editData" data-id="<?php echo $product_categories['id']?>" data-name="<?php echo $product_categories['name']?>"  data-toggle="modal" data-target="#editModal">
                                                 <img src="images/icons/edit.png"/>
                                             </a>
                                             <form method="post" style="display:contents!important;">
-                                                <input type="hidden" value="<?= $brand['id'] ?>" name="id"/>
+                                                <input type="hidden" value="<?= $product_categories['id'] ?>" name="id"/>
                                                 <button style="background-color:transparent!important; border:none;" type="submit" name="delete" onclick=" confirm(' you want to delete?');">
                                                 <img src="images/icons/delete.png"/>
                                                 </button>                                                 
@@ -134,7 +95,7 @@ if(isset($_POST['delete'])){
                             </tbody>
                         </table>
                     </div>
-                </div>
+                                </div>
             </div>
         </div>
     </div>
@@ -143,7 +104,7 @@ if(isset($_POST['delete'])){
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Brand</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Categories</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -153,12 +114,11 @@ if(isset($_POST['delete'])){
                         <label>Name</label>
                         <input type="text" name="name" class="form-control" required value="">
 
-                        <label>Image</label>
-                        <input type="file" name="image" class="form-control" required value="">
+                        
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="addBrand" class="btn btn-primary">Add</button>
+                    <button type="submit" name="addCategories" class="btn btn-primary">Add</button>
                 </div>
             </form>
         </div>
@@ -166,11 +126,15 @@ if(isset($_POST['delete'])){
 </div>
 
 
+
+
+
+
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Update Brands</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Update Categories</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -180,8 +144,7 @@ if(isset($_POST['delete'])){
                         <label>Name</label>
                         <input type="hidden" value="" name="id" id="updateId"/>
                         <input type="text" id="updateName" name="name" class="form-control" required>
-                        <label>Image</label>
-                        <input type="file" name="image" class="form-control" required value="">
+                        
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -193,19 +156,4 @@ if(isset($_POST['delete'])){
 </div>
 
 <?php include 'footer.php'?>
-
-<script>
-    $(document).ready (function(){
-        var id;
-        var name;
-        $( ".editData" ).on( "click", function(){
-             id =  $(this).attr("data-id");
-             name = $(this).attr("data-name");
-
-            
-            $('#updateId').val(id);
-            $('#updateName').val(name);
-        });
-
-    });
-</script>
+*
