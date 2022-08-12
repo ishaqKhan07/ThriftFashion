@@ -1,11 +1,17 @@
+
 <?php
 
-$conn = new mysqli('localhost', 'root', '','thrift-fashion');
 if (isset($_POST['subscribe'])) {
     $email=$_POST['email'];
     
-    $sub = mysqli_query($conn,"INSERT INTO `newsletter` (`email`) VALUES ('$email')");
+    $sub="INSERT INTO `newsletter`
+        ( `email`) VALUES
+        ('$email')";
+        mysqli_query($connect,$sub);
 }    
+
+
+
 ?>
 <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
         <div class="container">
@@ -116,18 +122,16 @@ if (isset($_POST['subscribe'])) {
                         <h3 class="footer-title">quick Links</h3>
                         <div class="footer-links">
                             <ul>
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Order History</a></li>
-                                <li><a href="#">Order Tracking</a></li>
-                                <li><a href="#">Best Seller</a></li>
-                                <li><a href="#">New Arrivals</a></li>
+                            <li><a href="home-standard.php">home</a></li>
+                                <li><a href="about.php">About US</a></li>
+                                <li><a href="contact.php">Contact US</a></li>
+                                <li><a href="blog-grid.php">Blogs</a></li>
                             </ul>
                             <ul>
-                                <li><a href="#">Location</a></li>
-                                <li><a href="#">Affiliates</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Carrer</a></li>
-                                <li><a href="#">Faq</a></li>
+                                <li><a href="brand-list.php">Brand List</a></li>
+                                <li><a href="shop-4column.php">Shop</a></li>
+                                <li><a href="faq.php">FAQ's</a></li>
+                                <li><a href="privacy.php">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>

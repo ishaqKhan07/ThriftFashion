@@ -5,11 +5,6 @@ include 'header.php';
 <section class="single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
     <div class="container">
         <h2>Brand Single</h2>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item"><a href="brand-list.php">brand-list</a></li>
-            <li class="breadcrumb-item active" aria-current="page">brand-single</li>
-        </ol>
     </div>
 </section>
 <div class="brand-single"><a href="#"><img src="images/brand/02.jpg" alt="brand"></a><a href="#">

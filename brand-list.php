@@ -6,10 +6,6 @@ include 'header.php';
 <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
     <div class="container">
         <h2>brand list</h2>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">brand-list</li>
-        </ol>
     </div>
 </section>
 <section class="inner-section">

@@ -791,6 +791,7 @@ $data = $data->select("select * from feedback limit 5");
 <?php
 include 'footer-link.php';
 include 'footer.php';
+
 ?>
 <script>
         $(document).ready(function(){
