@@ -4,7 +4,7 @@ class db{
     public $conn;
 
     function __construct() {
-        $conn = new mysqli("localhost","root","","thrift-fashion");
+        $conn = new mysqli("localhost","root","","thrift_fashion");
             if ($conn -> connect_errno) {
                 echo "Failed to connect to MySQL: " . $conn -> connect_error;
                 exit();

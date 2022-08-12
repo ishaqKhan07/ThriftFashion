@@ -1,10 +1,15 @@
 <?php include 'header-link.php';
 include 'connect.php';
+
 $data = new db();
 
 $contactSettings = $data->select('select * from contact_setting');
 $contact = $data->select('select * from contact_setting');
 $links = $data->select('select * from quick_links');
+if(isset($_SESSION['username'])){
+    $completedata = $_SESSION['completedata'];
+}
+
 
 ?>
 <div class="backdrop"></div><a class="backtop fas fa-arrow-up" href="#"></a>
@@ -70,9 +75,17 @@ $links = $data->select('select * from quick_links');
                     <i class="fas fa-shopping-basket"></i>
                     <sup>9+</sup>
                 </button>
-                <a href="login.php" class="header-widget" title="My Account">
-                <img src="images/user.png" alt="user">
-                <span>join</span>
+                <?php
+                     if(isset($_SESSION['username'])){            
+                ?>
+                        <a href="profole.php" class="header-widget" title="My Account">
+                        <img src="images/user.png" alt="user">
+                        <span><?= $completedata['name']  ?></span>
+                <?php }else{ ?> 
+                        <a href="login.php" class="header-widget" title="My Account">
+                        <img src="images/user.png" alt="user">
+                        <span>Login</span>  
+                <?php } ?>                 
             </a>
             </div>
         </div>

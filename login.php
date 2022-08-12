@@ -1,13 +1,48 @@
+<?php
+include 'custom.php';
+$email_error = "";
+$password_error = "";
+if (!isset($_SESSION['username'])) {
+    if (isset($_POST['submit'])) {
+        $enteremail = $_POST['email'];
+        $enterpassword = $_POST['password'];
+        $validation = true;
+        if (strlen($enteremail) == "" or !filter_var($enteremail, FILTER_VALIDATE_EMAIL)) {
+            $email_error = " **Enter valid Email**";
+            $validation = false;
+        }
+        if ($validation == true) {
+            if (strlen($enterpassword) <= 6) {
+                $password_error = "** Password must be greater then 6 latter **";
+                $validation = false;
+            }
+        }
+        if ($validation == true) {
+            $selectquery = "SELECT * FROM `users` WHERE `email` = '$enteremail'";
+            $selectdata = mysqli_query($con, $selectquery);
+            $total_user = mysqli_num_rows($selectdata);
+            if ($total_user == 1) {
+                $fetceddata = mysqli_fetch_assoc($selectdata);
+                if (password_verify($enterpassword, $fetceddata['password'])) {
+                    $_SESSION['completedata'] = $fetceddata;
+                    $_SESSION['username'] = $enteremail;
+                    header('Location: index.php');
+                }
+            }
+        }
+    }
+}
+?>
 <?php include 'header-link.php';
 include 'header.php';
 ?>
-<link rel="stylesheet" href="css/login.css">
 <link rel="stylesheet" href="css/user-auth.css">
+
 <body>
     <section class="user-form-part">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-12 col-lg-12 col-xl-10">
+                <div class="col-5    col-xl-5 col-lg-16 col-md-6 col-sm-8   ">
                     <div class="user-form-logo"><a href="index.php"><img src="images/logo.png" alt="logo"></a></div>
                     <div class="user-form-card">
                         <div class="user-form-title">
@@ -15,20 +50,11 @@ include 'header.php';
                             <p>Use your credentials to access</p>
                         </div>
                         <div class="user-form-group">
-                            <ul class="user-form-social">
-                                <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i>login with facebook</a></li>
-                                <li><a href="#" class="twitter"><i class="fab fa-twitter"></i>login with twitter</a></li>
-                                <li><a href="#" class="google"><i class="fab fa-google"></i>login with google</a></li>
-                                <li><a href="#" class="instagram"><i class="fab fa-instagram"></i>login with instagram</a></li>
-                            </ul>
-                            <div class="user-form-divider">
-                                <p>or</p>
-                            </div>
-                            <form class="user-form">
-                                <div class="form-group"><input type="email" class="form-control" placeholder="Enter your email"></div>
-                                <div class="form-group"><input type="password" class="form-control" placeholder="Enter your password"></div>
+                            <form class="user-form" method="POST">
+                                <div class="form-group"><input type="email" class="form-control" name="email" placeholder="Enter your email"></div>
+                                <div class="form-group"><input type="password" class="form-control" name="password" placeholder="Enter your password"></div>
                                 <div class="form-check mb-3"><input class="form-check-input" type="checkbox" value="" id="check"><label class="form-check-label" for="check">Remember Me</label></div>
-                                <div class="form-button"><button type="submit">login</button>
+                                <div class="form-button"><button type="submit" name="submit">login</button>
                                     <p>Forgot your password?<a href="reset-password.php">reset here</a></p>
                                 </div>
                             </form>
@@ -45,5 +71,5 @@ include 'header.php';
         </div>
     </section>
     <?php include 'footer-link.php';
-include 'footer.php';
-?>
+    include 'footer.php';
+    ?>

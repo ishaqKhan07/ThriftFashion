@@ -1,7 +1,10 @@
 <?php
 $title = 'Home';
-include 'header-link.php';
+include 'custom.php';
 include 'header.php';
+
+// die($_SESSION);
+
 $data = $data->select("select * from feedback limit 5");
 
 ?>
