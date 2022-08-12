@@ -4,7 +4,8 @@ $title = 'Seller Reviews';
 include 'header.php';
 
 
-$users = $data->select("select * from users");
+$users = $data->select("select * from users where role_id = 2");
+
 ?>
 
 
@@ -21,47 +22,26 @@ $users = $data->select("select * from users");
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
-                                    <th scope="col">Customer Email</th>
-                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Id</th>
+                                    <th>Image</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th>Created_at</th>
+                                    <th>Updated_at</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
                                 <?php 
-                                while ($product_categories = $product_category->fetch_assoc()) { ?>
-                                    <td><?= $product_categories['id']; ?></td>
-                                    <td><?= $product_categories['id']; ?></td>
-                                    <td><?= $product_categories['id']; ?></td>
-                                    <td>+<?= $product_categories['id']; ?></td>
-                                    <?php }?>
-                                </tr>
+                                while ($user = $users->fetch_assoc()){ ?>
                                 <tr>
-                                    <td>Lorem ipsum</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>example.@gmail.com</td>
-                                    <td>+923456789</td>
+                                    <td><?= $user['id']; ?></td>
+                                    <td><img width="50" height="50" src="../images/<?= $user['image']; ?>"/></td>
+                                    <td><?= $user['name']; ?></td>
+                                    <td><?= $user['email']; ?></td>
+                                    <td><?= $user['created_at']; ?></td>
+                                    <td><?= $user['updated_at']; ?></td>
                                 </tr>
-                                <tr>
-                                    <td>Lorem ipsum</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>example.@gmail.com</td>
-                                    <td>+923456789</td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem ipsum</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>example.@gmail.com</td>
-                                    <td>+923456789</td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem ipsum</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>example.@gmail.com</td>
-                                    <td>+923456789</td>
-                                </tr>
-                            
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
