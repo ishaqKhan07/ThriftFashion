@@ -97,9 +97,9 @@ if(isset($_SESSION['username'])){
             <div class="col-lg-12">
                 <div class="navbar-content">
                     <ul class="navbar-list">
-                        <li class="navbar-item"><a class="navbar-link" href="home-standard.php">home</a>
+                        <li class="navbar-item"><a class="navbar-link" href="index.php">home</a>
                         </li>
-                        <li class="navbar-item"><a class="navbar-link" href="shop-4column.php">shop</a>
+                        <li class="navbar-item"><a class="navbar-link" href="shop.php">shop</a>
                         </li>
                         <li class="navbar-item"><a class="navbar-link" href="brand-list.php">Brand List</a>
                         </li>
@@ -122,7 +122,7 @@ if(isset($_SESSION['username'])){
                                 <li><a href="change-password.php">change password</a></li>
                             </ul>
                         </li>
-                        <li class="navbar-item"><a class="navbar-link" href="blog-grid.php">blogs</a>
+                        <li class="navbar-item"><a class="navbar-link" href="blogs.php">blogs</a>
                         </li>
                     </ul>
                     <div class="navbar-info-group">
