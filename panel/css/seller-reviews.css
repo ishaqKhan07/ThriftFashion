@@ -24,7 +24,17 @@
 .mob {
   display: none;
 }
-
+.table {
+  width: 100%;
+  /* max-width: 100%; */
+  margin-bottom: 1rem;
+  min-width: 991px;
+}
+@media (max-width: 991px){
+  .cutomer-res .table td p {
+    font-size: 10px;
+}
+}
 header .mobile-header {
   width: 30%;
   height: 100%;

@@ -1,41 +1,41 @@
-
 <?php
 $title = 'Product Categories';
 include 'header.php';
 
 $product_category = $data->select("select * from product_categories");
-if(isset($_POST['addCategories'])){
+if (isset($_POST['addCategories'])) {
     $name = $_POST['name'];
 
     $add = $data->add("insert into product_categories (`name`) values ('$name')");
-    if($add){
-        if($add){
+    if ($add) {
+        if ($add) {
+            $product_category = $data->select("select * from product_categories");
             $_SESSION['flash_success'] = 'Category Added Successfully!';
             $script =  <<< JS
                location.reload();
             JS;
         }
     }
-    
 }
 
-if(isset($_POST['update'])){
-    $id=$_POST['id'];
-    $name=$_POST['name'];
-    $editQuery = $data->select("UPDATE `product_categories` SET `name` = '$name'  WHERE `id` = '$id'"); 
-    if($editQuery){
-            $_SESSION['flash_success'] = 'Category updated Successfully!';
-            $script =  <<< JS
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $editQuery = $data->select("UPDATE `product_categories` SET `name` = '$name'  WHERE `id` = '$id'");
+    if ($editQuery) {
+        $product_category = $data->select("select * from product_categories");
+        $_SESSION['flash_success'] = 'Category updated Successfully!';
+        $script =  <<< JS
                location.reload();
             JS;
-        }
-
+    }
 }
 
-if(isset($_POST['delete'])){
-    $id=$_POST['id'];
+if (isset($_POST['delete'])) {
+    $id = $_POST['id'];
     $deleteQuery = $data->select("DELETE FROM `product_categories` WHERE `id` = '$id'");
-    if($deleteQuery){
+    if ($deleteQuery) {
+        $product_category = $data->select("select * from product_categories");
         $_SESSION['flash_success'] = 'Category delete Successfully!';
         $script =  <<< JS
            location.reload();
@@ -69,7 +69,7 @@ if(isset($_POST['delete'])){
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php 
+                                <?php
                                 while ($product_categories = $product_category->fetch_assoc()) { ?>
                                     <tr>
                                         <td><?= $product_categories['id']; ?></td>
@@ -77,17 +77,17 @@ if(isset($_POST['delete'])){
                                         <td><?= $product_categories['created_at']; ?></td>
                                         <td><?= $product_categories['updated_at']; ?></td>
                                         <td>
-                                            <a href="#" class="editData" data-id="<?php echo $product_categories['id']?>" data-name="<?php echo $product_categories['name']?>"  data-toggle="modal" data-target="#editModal">
-                                                <img src="images/icons/edit.png"/>
+                                            <a href="#" class="editData" data-id="<?php echo $product_categories['id'] ?>" data-name="<?php echo $product_categories['name'] ?>" data-toggle="modal" data-target="#editModal">
+                                                <img src="images/icons/edit.png" />
                                             </a>
                                             <form method="post" style="display:contents!important;">
-                                                <input type="hidden" value="<?= $product_categories['id'] ?>" name="id"/>
-                                                <button style="background-color:transparent!important; border:none;" type="submit" name="delete" onclick=" confirm(' you want to delete?');">
-                                                <img src="images/icons/delete.png"/>
-                                                </button>                                                 
+                                                <input type="hidden" value="<?= $product_categories['id'] ?>" name="id" />
+                                                <button style="background-color:transparent!important; border:none;" type="submit" name="delete">
+                                                    <img src="images/icons/delete.png" />
+                                                </button>
                                             </form>
                                             <a href="">
-                                                
+
                                             </a>
                                         </td>
                                     </tr>
@@ -95,7 +95,7 @@ if(isset($_POST['delete'])){
                             </tbody>
                         </table>
                     </div>
-                                </div>
+                </div>
             </div>
         </div>
     </div>
@@ -111,10 +111,10 @@ if(isset($_POST['delete'])){
             </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="modal-body">
-                        <label>Name</label>
-                        <input type="text" name="name" class="form-control" required value="">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" required value="">
 
-                        
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -141,10 +141,10 @@ if(isset($_POST['delete'])){
             </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="modal-body">
-                        <label>Name</label>
-                        <input type="hidden" value="" name="id" id="updateId"/>
-                        <input type="text" id="updateName" name="name" class="form-control" required>
-                        
+                    <label>Name</label>
+                    <input type="hidden" value="" name="id" id="updateId" />
+                    <input type="text" id="updateName" name="name" class="form-control" required>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -155,5 +155,19 @@ if(isset($_POST['delete'])){
     </div>
 </div>
 
-<?php include 'footer.php'?>
-*
+<?php include 'footer.php' ?>
+<script>
+    $(document).ready (function(){
+        var id;
+        var name;
+        $( ".editData" ).on( "click", function(){
+             id =  $(this).attr("data-id");
+             name = $(this).attr("data-name");
+
+            
+            $('#updateId').val(id);
+            $('#updateName').val(name);
+        });
+
+    });
+</script>

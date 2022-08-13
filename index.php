@@ -6,6 +6,7 @@ include 'header.php';
 // die($_SESSION);
 $products = $data->select('select * from products');
 $data = $data->select("select * from feedback limit 5");
+$categories = $data->select("select * from categories")
 
 ?>
 <link rel="stylesheet" href="css/home-standard.css">
@@ -80,12 +81,12 @@ $data = $data->select("select * from feedback limit 5");
                     <div class="banner-category">
                         <div class="banner-category-head"><i class="fas fa-bars"></i><span>top categories</span></div>
                         <ul class="banner-category-list">
-                            <li class="banner-category-item"><a href="#" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span>TShirts</span></a>
+                            <?php 
+                                while($cat = $categories->fetch_assoc){
+                            ?>
+                            <li class="banner-category-item"><a href="category?" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span>TShirts</span></a>
                             </li>
-                            <li class="banner-category-item"><a href="#" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span>Jeans</span></a>
-                            </li>
-                            <li class="banner-category-item"><a href="#" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span>Jackets</span></a>
-                            </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
