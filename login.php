@@ -28,9 +28,15 @@ if (!isset($_SESSION['username'])) {
                     $_SESSION['username'] = $enteremail;
                     header('Location: index.php');
                 }
+                else{
+                    $password_error = "** You Enter Wrong Password **";
+                }
             }
         }
     }
+}
+else{
+    header('Location: index.php');
 }
 ?>
 <?php include 'header-link.php';
@@ -51,8 +57,14 @@ include 'header.php';
                         </div>
                         <div class="user-form-group">
                             <form class="user-form" method="POST">
-                                <div class="form-group"><input type="email" class="form-control" name="email" placeholder="Enter your email"></div>
-                                <div class="form-group"><input type="password" class="form-control" name="password" placeholder="Enter your password"></div>
+                                <div class="form-group">
+                                    <small class="d-block text-end"><?php if(isset($_POST['submit'])){echo $email_error;} ?></small>
+                                    <input type="email" class="form-control" name="email" value="<?php if(isset($_POST['submit'])){echo $enteremail;} ?>" placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <small class="d-block text-end"><?php if(isset($_POST['submit'])){echo $password_error;} ?></small>
+                                    <input type="password" class="form-control" name="password" value="<?php if(isset($_POST['submit'])){echo $enterpassword;} ?>" placeholder="Enter your password">
+                                </div>
                                 <div class="form-check mb-3"><input class="form-check-input" type="checkbox" value="" id="check"><label class="form-check-label" for="check">Remember Me</label></div>
                                 <div class="form-button"><button type="submit" name="submit">login</button>
                                     <p>Forgot your password?<a href="reset-password.php">reset here</a></p>

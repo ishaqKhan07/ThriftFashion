@@ -4,6 +4,9 @@ $name_error = $name_error1 = $email_error = $password_error = $confirmpassword_e
 if (isset($_SESSION['usertype'])) {
     header('Location: index.php');
 }
+if(isset($_SESSION['username'])){
+    header('Location: profile.php');
+}
 if (isset($_POST['submit'])) {
     $firstname = $_POST['username'];
     $email = $_POST['email'];
@@ -11,8 +14,8 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $confirmpassword = $_POST['confirmpassword'];
     $validation = true;
-    if (trim(strlen($firstname)) <= 2) {
-        $name_error = " **name Must be greater then 5**";
+    if (trim(strlen($firstname)) <= 3) {
+        $name_error = " **name Must be greater then 3**";
         $validation = false;
     }
     if ($validation == true) {
@@ -33,8 +36,8 @@ if (isset($_POST['submit'])) {
         }
     }
     if ($validation == true) {
-        if (trim(strlen($contact_no)) <= 10) {
-            $number_error = " **name Must be greater then 5**";
+        if (trim(strlen($contact_no)) <= 7) {
+            $number_error = " **number Must be greater then 7**";
             $validation = false;
             echo $number_error;
         }
@@ -48,13 +51,11 @@ if (isset($_POST['submit'])) {
         if ($validation == true and $password != $confirmpassword) {
             $confirmpassword_error = " **Password doesnot Match**";
             $validation = false;
-            echo $confirmpassword;
         }
-        echo $password;
     }
     if ($validation == true) {
-        // $otp = rand(1000, 10000);
-        $otp = "12345";
+        $otp = rand(1000, 10000);
+        // $otp = "12345";
         if (mail($email, "verify Your Email", $otp, "easybookingabcd@gmail.com")) {
             $_SESSION['signupdata'] = array($firstname, $email, $contact_no, $password);
             $_SESSION['otp'] = $otp;
@@ -73,7 +74,7 @@ include 'header.php';
     <section class="user-form-part">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-12 col-lg-12 col-xl-10">
+                <div class="col-6 col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xs-12">
                     <div class="user-form-logo"><a href="index.php"><img src="images/logo.png" alt="logo"></a></div>
                     <div class="user-form-card">
                         <div class="user-form-title">
@@ -81,23 +82,26 @@ include 'header.php';
                             <p>Setup A New Account In A Minute</p>
                         </div>
                         <div class="user-form-group">
-                            <ul class="user-form-social">
-                                <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i>Join with facebook</a>
-                                </li>
-                                <li><a href="#" class="twitter"><i class="fab fa-twitter"></i>Join with twitter</a></li>
-                                <li><a href="#" class="google"><i class="fab fa-google"></i>Join with google</a></li>
-                                <li><a href="#" class="instagram"><i class="fab fa-instagram"></i>Join with
-                                        instagram</a></li>
-                            </ul>
-                            <div class="user-form-divider">
-                                <p>or</p>
-                            </div>
                             <form class="user-form" method="POST">
-                                <div class="form-group"><input type="text" class="form-control" name="username" placeholder="Enter your name"></div>
-                                <div class="form-group"><input type="email" class="form-control" name="email" placeholder="Enter your email"></div>
-                                <div class="form-group"><input type="number" class="form-control" name="contact_no" placeholder="Enter your Number"></div>
-                                <div class="form-group"><input type="password" class="form-control" name="password" placeholder="Enter your password"></div>
-                                <div class="form-group"><input type="password" class="form-control" name="confirmpassword" placeholder="Enter repeat password"></div>
+                                <div class="form-group">
+                                    <small class="d-block text-end"><?php if(isset($_POST['submit'])){echo $name_error;} ?></small>
+                                    <input type="text" class="form-control" name="username" value="<?php if(isset($_POST['submit'])){echo $firstname;} ?>" placeholder="Enter your name" required minlength="4" maxlength="45"></div>
+                                <div class="form-group">
+                                    <small class="d-block text-end"><?php if(isset($_POST['submit'])){echo $email_error;} ?></small>
+                                    <input type="email" class="form-control" name="email" value="<?php if(isset($_POST['submit'])){echo $email;} ?>" placeholder="Enter your email"  minlength="3" maxlength="122" required>
+                                </div>
+                                <div class="form-group">
+                                <small class="d-block text-end"><?php if(isset($_POST['submit'])){echo $number_error;} ?></small>
+                                    <input type="number" class="form-control" name="contact_no" value="<?php if(isset($_POST['submit'])){echo $contact_no;} ?>" placeholder="Enter your Number" minlength="8" maxlength="20" required  >
+                                </div>
+                                <div class="form-group">
+                                    <small class="d-block text-end"><?php if(isset($_POST['submit'])){echo $password_error;} ?></small>
+                                    <input type="password" class="form-control" name="password" value="<?php if(isset($_POST['submit'])){echo $password;} ?>" placeholder="Enter your password"  minlength="7" maxlength="35" required>
+                                </div>
+                                <div class="form-group">
+                                    <small class="d-block text-end"><?php if(isset($_POST['submit'])){echo $confirmpassword_error;} ?></small>
+                                    <input type="password" class="form-control" name="confirmpassword" value="<?php if(isset($_POST['submit'])){echo $confirmpassword;} ?>" placeholder="Enter repeat password" minlength="7" maxlength="35" required>
+                                </div>
                                 <div class="form-check mb-3"><input class="form-check-input" type="checkbox" value="" id="check"><label class="form-check-label" for="check">Accept all the <a href="#">Terms & Conditions</a></label></div>
                                 <div class="form-button"><button type="submit" name="submit">register</button></div>
                             </form>

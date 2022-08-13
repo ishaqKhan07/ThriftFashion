@@ -4,6 +4,7 @@ include 'header.php';
 
 $brands = $data->select('select * from brands');
 $product_categories = $data->select('select * from product_categories');
+$products= $data->select("select * from products");
 
 $imageError = '';
  if(isset($_POST['addBrand'])){
@@ -14,7 +15,7 @@ $imageError = '';
     $stock = $_POST['stock'];
     $price = $_POST['price'];
 
-    $target_dir = "../images/product/";
+    $target_dir = "../images/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -34,7 +35,7 @@ $imageError = '';
 
 
     if($uploadOk == 1){
-        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], '../images/product/'.$org_file)) {
 
             $add = $data->add("INSERT INTO `products`(`name` , `category_id` , `brand_id` , `description` , `stock` , `price`, `Image`) VALUES 
             ('$name','$catagory','$brand','$description','$stock', '$price', '$org_file')");
@@ -86,7 +87,31 @@ $imageError = '';
                             </tr>
                         </thead>
                         <tbody>
-
+                            <?php while($data = $products->fetch_assoc()){ ?>
+                                <tr>
+                                    <td><?php echo $data['id'] ?></td>
+                                    <td><?php echo $data['category_id'] ?></td>
+                                    <td><?php echo $data['brand_id'] ?></td>
+                                    <td><?php echo $data['name'] ?></td>
+                                    <td><?php echo $data['description'] ?></td>
+                                    <td><img src="../images/product/<?php echo $data['image'] ?>"></td>
+                                    <td><?php echo $data['stock'] ?></td>
+                                    <td><?php echo $data['price'] ?></td>
+                                    <td><?php echo $data['created_at'] ?></td>
+                                    <td><?= $data['updated_at'] ?></td>
+                                    <td>
+                                        <a href="#" class="editData" data-id="<?php echo $data['id']?>" data-name="<?php echo $data['name']?>" data-cat="<?= $data[''] ?>"  data-toggle="modal" data-target="#editModal">
+                                                <img src="images/icons/edit.png"/>
+                                            </a>
+                                            <form method="post" style="display:contents!important;">
+                                                <input type="hidden" value="<?= $brand['id'] ?>" name="id"/>
+                                                <button style="background-color:transparent!important; border:none;" type="submit" name="delete" onclick=" confirm(' you want to delete?');">
+                                                <img src="images/icons/delete.png"/>
+                                                </button>                                                 
+                                            </form>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>    
                 </div>
@@ -114,14 +139,14 @@ $imageError = '';
                         <label>Select Category</label>
                         <select class="form-control" name="category_id" id="">
                             <?php while($cat =  $product_categories->fetch_assoc()){ ?>
-                                <option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option>
+                                <option value="<?= $cat['name'] ?>"><?= $cat['name'] ?></option>
                             <?php } ?> 
                         </select>
 
                         <label>Select Brand</label>
                         <select class="form-control" name="brand_id" id="">
                             <?php while($brand =  $brands->fetch_assoc()){ ?>
-                                <option value="<?= $brand['id'] ?>"><?= $brand['name'] ?></option>
+                                <option value="<?= $brand['name'] ?>"><?= $brand['name'] ?></option>
                            <?php } ?> 
                         </select>
                         <label>Description</label>
@@ -146,19 +171,4 @@ $imageError = '';
         </div>
     </div>
 </div>
-<?php include 'footer.php'?>
-<script>
-    $(document).ready( function () {
-        var table = 'products';
-        $.ajax({  
-        type: "GET",
-        url: "data.php",
-        dataType: JSON,                
-        data:  { tablee: table},              
-        success: function(response){                    
-            $("#responsecontainer").html(response); 
-            //alert(response);
-        }
-    });
-});
-</script>
+<?php include 'footer.php';?>

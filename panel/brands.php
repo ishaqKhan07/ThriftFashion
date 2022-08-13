@@ -119,9 +119,6 @@ if(isset($_POST['delete'])){
                                                 <img src="images/icons/delete.png"/>
                                                 </button>                                                 
                                             </form>
-                                            <a href="">
-                                                
-                                            </a>
                                         </td>
                                     </tr>
                                 <?php } ?>

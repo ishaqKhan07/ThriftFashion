@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2022 at 01:21 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.15
+-- Generation Time: Aug 13, 2022 at 09:32 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -199,6 +199,35 @@ CREATE TABLE `products` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `category_id`, `brand_id`, `name`, `description`, `image`, `price`, `stock`, `created_at`, `updated_at`) VALUES
+(1, 2, 3, 'Ishaq', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies mi felis, vitae convallis neque pulvinar eget. Quisque sodales augue et purus iaculis, ac dictum massa mattis. Curabitur ut condimentum turpis. Aenean vulputate tincidunt mauris, non volutpat dui suscipit sed. Proin aliquam orci vitae pulvinar consectetur. Vi', '1660373492.jpg', 45, 16, '2022-08-13 06:51:34', '2022-08-13 06:51:34'),
+(2, 0, 0, 'abcd', 'qwertyu', '1660374864.jpg', 123, 21, '2022-08-13 07:14:24', '2022-08-13 07:14:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_categories`
+--
+
+CREATE TABLE `product_categories` (
+  `id` int(145) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product_categories`
+--
+
+INSERT INTO `product_categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'shirt', '2022-08-13 06:49:54', '2022-08-13 06:49:54'),
+(2, 'paint', '2022-08-13 06:50:02', '2022-08-13 06:50:02');
+
 -- --------------------------------------------------------
 
 --
@@ -242,13 +271,24 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
   `name` text NOT NULL,
+  `contact_no` int(23) NOT NULL,
   `email` text NOT NULL,
-  `image` varchar(200) NOT NULL,
+  `image` varchar(500) NOT NULL DEFAULT 'images/user.png',
   `password` text NOT NULL,
+  `address` text NOT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `role_id`, `name`, `contact_no`, `email`, `image`, `password`, `address`, `status`, `created_at`, `updated_at`) VALUES
+(1, 0, 'ishaq khan', 2147483647, 'admin@admin.com', '', '$2y$10$N3XbJl.Y4skhQohNhBxineNv2BhmYZuCekN.TnvubnhCchfh61bym', ' Saima Trade Tower, B-115, 1st Floor، I.I Chundrigar Rd, Karachi, Karachi City, Sindh', 1, '2022-08-12 09:40:39', '2022-08-12 09:40:39'),
+(2, 0, 'Sufyan SHah', 2147483647, 'ishaqkhan00023@gmail.com', 'images/users/vlcsnap-2022-06-26-04h06m48s608.png', '$2y$10$5Vf32220aQocqZu0aPMIveb/TaxXkwtQRs1Rvv7MZtpb4AQ2Iy6FG', ' Saima Trade Tower, B-115, 1st Floor، I.I Chundrigar Rd, Karachi, Karachi City, Sindh', 1, '2022-08-12 11:47:30', '2022-08-12 11:47:30'),
+(3, 0, 'qwerty', 2147483647, 'sufyanshahyousufzai@gmail.com', 'images/users/images.jpg', '$2y$10$jhitRaiMxgy21f//awBWl.kePpAdn39JJ1RSZZLgDtzrTgUU602T6', 'Saima Trade Tower, B-115, 1st Floor، I.I Chundrigar Rd, Karachi, Karachi City, Sindh', 1, '2022-08-12 18:53:25', '2022-08-12 18:53:25');
 
 --
 -- Indexes for dumped tables
@@ -288,6 +328,12 @@ ALTER TABLE `orders`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product_categories`
+--
+ALTER TABLE `product_categories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -346,7 +392,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `product_categories`
+--
+ALTER TABLE `product_categories`
+  MODIFY `id` int(145) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `quick_links`
@@ -364,7 +416,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

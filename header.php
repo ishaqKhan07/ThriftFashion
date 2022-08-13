@@ -78,13 +78,13 @@ if(isset($_SESSION['username'])){
                 <?php
                      if(isset($_SESSION['username'])){            
                 ?>
-                        <a href="profole.php" class="header-widget" title="My Account">
-                        <img src="images/user.png" alt="user">
+                        <a href="profile.php" class="header-widget" title="My Account">
+                        <img src="<?php echo $completedata['image']  ?>" alt="user">
                         <span><?= $completedata['name']  ?></span>
                 <?php }else{ ?> 
                         <a href="login.php" class="header-widget" title="My Account">
                         <img src="images/user.png" alt="user">
-                        <span>Login</span>  
+                        <span>Login</span> 
                 <?php } ?>                 
             </a>
             </div>
