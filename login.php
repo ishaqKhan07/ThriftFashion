@@ -26,7 +26,12 @@ if (!isset($_SESSION['username'])) {
                 if (password_verify($enterpassword, $fetceddata['password'])) {
                     $_SESSION['completedata'] = $fetceddata;
                     $_SESSION['username'] = $enteremail;
+                    if($enteremail == "admin@admin.com"){
+                        header('Location: panel/seller-home.php');
+                    }
+                    else{
                     header('Location: index.php');
+                    }
                 }
                 else{
                     $password_error = "** You Enter Wrong Password **";

@@ -98,26 +98,8 @@ if(isset($_POST['link'])){
                         </div>
                     </div>
                 </div>
-                <div class="bussiness_information">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="headings_warpper">
-                                <h4>Change Password</h4>
-                            </div>
-                            <form method='post' class="w-100">
-                                <label>Enter Old Password</label>
-                                <input type="password" name="old_password" value="" class="form-control mb-2"/>
-
-                                <label>Enter New Password</label>
-                                <input type="password" name="new_password" value="" class="form-control mb-2"/>
-
-                                  <label>Confirm Password</label>
-                                <input type="password" name="confirm_password" value="" class="form-control mb-2"/>
-            
-                                <button type="submit" class="btn theme-btn mt-2">Update</button>
-                            </form>
-                        </div>
-                    </div>
+                <div class="bussiness_information text-center">
+                    <a href="../profile.php" class="btn btn-outline-secondary">Update Password and Image</a>
                 </div>
             </div>
         </div>

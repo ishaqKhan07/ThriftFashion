@@ -54,13 +54,13 @@ if (isset($_POST['submit'])) {
         }
     }
     if ($validation == true) {
-        $otp = rand(1000, 10000);
-        // $otp = "12345";
-        if (mail($email, "verify Your Email", $otp, "easybookingabcd@gmail.com")) {
+        // $otp = rand(1000, 10000);
+        $otp = "12345";
+        // if (mail($email, "verify Your Email", $otp, "easybookingabcd@gmail.com")) {
             $_SESSION['signupdata'] = array($firstname, $email, $contact_no, $password);
             $_SESSION['otp'] = $otp;
             header('Location: otp.php');
-        }
+        // }
     }
 }
 ?>

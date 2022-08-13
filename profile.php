@@ -109,6 +109,14 @@ include 'header.php';
                                     </ul>
                                 </div>
                             </div>
+                            <?php if($_SESSION['username'] == "admin@admin.com"){ ?>
+                            <div class="col-md-6 col-lg-4 alert fade show">
+                                <div class="profile-card contact active">
+                                    <h6>Contact No</h6>
+                                    <p><a href="panel/seller-account.php">Go to Dashboard</a></p>
+                                </div>
+                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -116,7 +124,6 @@ include 'header.php';
         </div>
     </div>
 </section>
-
 <div class="modal fade" id="profile-edit">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content"><button class="modal-close" data-bs-dismiss="modal"><i class="icofont-close"></i></button>
@@ -159,7 +166,6 @@ include 'header.php';
                 <button class="form-btn" name="update_address" type="submit">save address info</button>
             </form>
         </div>
-
     </div>
 </div>
 </div>

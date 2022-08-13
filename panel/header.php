@@ -1,6 +1,12 @@
-<?php 
+<?php
     include 'connect.php';
     session_start();
+    if(!isset($_SESSION['username']) AND $_SESSION['username']!="admin@admin.com"){
+        header('Location: ../index.php');
+    }
+    else{
+        $completedata = $_SESSION['completedata'];
+    }
     $data = new db();
 ?>
 
@@ -70,7 +76,7 @@
             <div class="row">
                 <div class="col-lg-4 align-self-center">
                     <div class="seller-header-wrapper">
-                        <a href="index-2.php" class="header-name">Thrift Fashion</a>
+                        <a href="../index.php" class="header-name">Thrift Fashion</a>
                         
                     </div>
                 </div>
@@ -83,9 +89,9 @@
                             <div class="dropdown">
                                 <button class="btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="img/profile.png" alt="">
+                                    <img src="../<?php echo $completedata['image'] ?>" width="50px" height="50px" style="border-radius: 50%;" alt="">
                                     <span class="pro-name">
-                                        <h6>Hello User <br> Happy Selling</h6>
+                                        <h6><?php echo $completedata['name'] ?></h6>
                                     </span>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
