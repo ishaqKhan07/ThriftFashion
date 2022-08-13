@@ -34,7 +34,7 @@ $users = $data->select("select * from users where role_id = 2");
                                     while ($user = $users->fetch_assoc()){ ?>
                                 <tr>
                                     <td><?= $user['id']; ?></td>
-                                    <td><img width="50" height="50" src="../images/<?= $user['image']; ?>"/></td>
+                                    <td><img +width="50" height="50" src="../images/<?= $user['image']; ?>"/></td>
                                     <td><?= $user['name']; ?></td>
                                     <td><?= $user['email']; ?></td>
                                     <td><?= $user['created_at']; ?></td>
