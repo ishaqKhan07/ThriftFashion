@@ -106,7 +106,7 @@ if(isset($_POST['delete'])){
                                     <tr>
                                         <td><?= $brand['id']; ?></td>
                                         <td><?= $brand['name']; ?></td>
-                                        <td><img src="images/<?= $brand['image']; ?>"></td>
+                                        <td><img width="80" src="../images/brands/<?= $brand['image']; ?>"></td>
                                         <td><?= $brand['created_at']; ?></td>
                                         <td><?= $brand['updated_at']; ?></td>
                                         <td>

@@ -3,15 +3,10 @@ $title = 'Home';
 include 'custom.php';
 include 'header.php';
 
-<<<<<<< Updated upstream
-// die($_SESSION);
 $products = $data->select('select * from products');
-=======
-$product_categories = $data->select("select * from product_categories");
->>>>>>> Stashed changes
-$data = $data->select("select * from feedback limit 5");
-$categories = $data->select("select * from categories")
 
+$product_categories = $data->select("select * from product_categories limit 8");
+$data = $data->select("select * from feedback limit 5");
 ?>
 <link rel="stylesheet" href="css/home-standard.css">
     <div class="modal fade" id="product-view">
@@ -85,19 +80,10 @@ $categories = $data->select("select * from categories")
                     <div class="banner-category">
                         <div class="banner-category-head"><i class="fas fa-bars"></i><span>top categories</span></div>
                         <ul class="banner-category-list">
-<<<<<<< Updated upstream
-                            <?php 
-                                while($cat = $categories->fetch_assoc){
-                            ?>
-                            <li class="banner-category-item"><a href="category?" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span>TShirts</span></a>
-                            </li>
-                            <?php } ?>
-=======
                             <?php while($cat = $product_categories->fetch_assoc()){ ?>
                             <li class="banner-category-item"><a href="shop.php?category=<?= $cat['name'];  ?>" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span><?= $cat['name'] ?></span></a>
                             </li>
                             <?php } ?>    
->>>>>>> Stashed changes
                         </ul>
                     </div>
                 </div>
@@ -164,7 +150,7 @@ $categories = $data->select("select * from categories")
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-btn-25"><a href="shop-4column.php" class="btn btn-inline"><i class="fas fa-eye"></i><span>view all deals</span></a></div>
+                    <div class="section-btn-25"><a href="shop-4column.php" class="btn btn-inline"><i class="fas fa-eye"></i><span>view all products</span></a></div>
                 </div>
             </div>
         </div>
