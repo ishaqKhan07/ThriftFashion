@@ -4,7 +4,7 @@ include 'custom.php';
 include 'header.php';
 
 // die($_SESSION);
-
+$products = $data->select('select * from products');
 $data = $data->select("select * from feedback limit 5");
 
 ?>

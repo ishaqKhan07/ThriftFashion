@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2022 at 09:32 AM
+-- Generation Time: Aug 13, 2022 at 01:31 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -188,8 +188,8 @@ CREATE TABLE `orders` (
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `category_id` int(10) NOT NULL,
-  `brand_id` int(11) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `brand` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `image` varchar(120) NOT NULL,
@@ -203,9 +203,8 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `brand_id`, `name`, `description`, `image`, `price`, `stock`, `created_at`, `updated_at`) VALUES
-(1, 2, 3, 'Ishaq', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies mi felis, vitae convallis neque pulvinar eget. Quisque sodales augue et purus iaculis, ac dictum massa mattis. Curabitur ut condimentum turpis. Aenean vulputate tincidunt mauris, non volutpat dui suscipit sed. Proin aliquam orci vitae pulvinar consectetur. Vi', '1660373492.jpg', 45, 16, '2022-08-13 06:51:34', '2022-08-13 06:51:34'),
-(2, 0, 0, 'abcd', 'qwertyu', '1660374864.jpg', 123, 21, '2022-08-13 07:14:24', '2022-08-13 07:14:24');
+INSERT INTO `products` (`id`, `category`, `brand`, `name`, `description`, `image`, `price`, `stock`, `created_at`, `updated_at`) VALUES
+(2, 'qwerty', 'aasdfg', 'abcd', 'qwertyu', '1660374864.jpg', 123, 21, '2022-08-13 07:14:24', '2022-08-13 07:14:24');
 
 -- --------------------------------------------------------
 
