@@ -99,15 +99,13 @@ if(isset($_SESSION['username'])){
                     <ul class="navbar-list">
                         <li class="navbar-item"><a class="navbar-link" href="index.php">home</a>
                         </li>
-                        <li class="navbar-item"><a class="navbar-link" href="shop.php">shop</a>
+                        <li class="navbar-item"><a class="navbar-link" href="about.php">About us</a>
                         </li>
                         <li class="navbar-item"><a class="navbar-link" href="brand-list.php">Brand List</a>
                         </li>
 
                         <li class="navbar-item dropdown"><a class="navbar-link dropdown-arrow" href="#">pages</a>
                             <ul class="dropdown-position-list">
-                                <li><a href="about.php">about us</a></li>
-                                <li><a href="contact.php">contact us</a></li>
                                 <li><a href="faq.php">faqs</a></li>
                                 <li><a href="privacy.php">privacy policy</a></li>
                                 <li><a href="profile.php">my profile</a></li>
@@ -122,8 +120,9 @@ if(isset($_SESSION['username'])){
                                 <li><a href="change-password.php">change password</a></li>
                             </ul>
                         </li>
-                        <li class="navbar-item"><a class="navbar-link" href="blogs.php">blogs</a>
+                        <li class="navbar-item"><a class="navbar-link" href="contact.php">Contact us</a>
                         </li>
+
                     </ul>
                     <div class="navbar-info-group">
                         <?php
@@ -234,7 +233,7 @@ if(isset($_SESSION['username'])){
         </li>
     </ul>
     <div class="category-footer">
-        <p>All Rights Reserved by <a href="#">Mironcoder</a></p>
+        <p>All Rights Reserved by <a href="#">Thrift Fashion</a></p>
     </div>
 </aside>
 <aside class="cart-sidebar">
@@ -376,14 +375,7 @@ if(isset($_SESSION['username'])){
                     <li><a href="change-password.php">change password</a></li>
                 </ul>
             </li>
-            <li><a class="nav-link dropdown-link" href="#"><i class="icofont-book-alt"></i>blogs</a>
-                <ul class="dropdown-list">
-                    <li><a href="blog-grid.php">blog grid</a></li>
-                    <li><a href="blog-standard.php">blog standard</a></li>
-                    <li><a href="blog-details.php">blog details</a></li>
-                    <li><a href="blog-author.php">blog author</a></li>
-                </ul>
-            </li>
+           
             <li><a class="nav-link" href="offer.php"><i class="icofont-sale-discount"></i>offers</a></li>
             <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
             <li><a class="nav-link" href="faq.php"><i class="icofont-support-faq"></i>need help</a></li>

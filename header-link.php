@@ -7,7 +7,7 @@
     <meta name="keywords"
         content="organic, food, shop, ecommerce, store, html, bootstrap, template, agriculture, vegetables, products, farm, grocery, natural, online">
     <title><?= "ThriftFashion | " . $title; ?></title>
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/logo/hanger.png">
     <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
     <link rel="stylesheet" href="fonts/icofont/icofont.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/fontawesome.min.css">

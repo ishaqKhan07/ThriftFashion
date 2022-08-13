@@ -18,8 +18,8 @@ if (isset($_POST['subscribe'])) {
             <div class="row align-items-center">
                 <div class="col-md-5 col-lg-6 col-xl-7">
                     <div class="news-text">
-                        <h2>Get 20% Discount for Subscriber</h2>
-                        <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
+                        <h2>Subscribe us </h2>
+                        <p>To get latest updates</p>
                     </div>
                 </div>
                 <div class="col-md-7 col-lg-6 col-xl-5">
@@ -39,8 +39,8 @@ if (isset($_POST['subscribe'])) {
                     <div class="intro-wrap">
                         <div class="intro-icon"><i class="fas fa-truck"></i></div>
                         <div class="intro-content">
-                            <h5>free home delivery</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
+                        <h5>Fast Delivery Service</h5>
+                        <p>As soon as the order is confirmed, our delivery deparment comes in action and try to deliver the product as fast as they can.</p>
                         </div>
                     </div>
                 </div>
@@ -48,8 +48,8 @@ if (isset($_POST['subscribe'])) {
                     <div class="intro-wrap">
                         <div class="intro-icon"><i class="fas fa-sync-alt"></i></div>
                         <div class="intro-content">
-                            <h5>instant return policy</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
+                        <h5>Clean and Tidy Products</h5>
+                            <p>Our Products goes through a complete process where each product is hand-washed and dried to give them a new look.</p>
                         </div>
                     </div>
                 </div>
@@ -57,8 +57,8 @@ if (isset($_POST['subscribe'])) {
                     <div class="intro-wrap">
                         <div class="intro-icon"><i class="fas fa-headset"></i></div>
                         <div class="intro-content">
-                            <h5>quick support system</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
+                        <h5>instant support team</h5>
+                            <p>We have a 24hr service for the customers where they can ask their questions and queries regarding any product or service.</p>
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,8 @@ if (isset($_POST['subscribe'])) {
                     <div class="intro-wrap">
                         <div class="intro-icon"><i class="fas fa-lock"></i></div>
                         <div class="intro-content">
-                            <h5>secure payment way</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
+                        <h5>quickly return policy</h5>
+                            <p>We have a three days return policy where the customer can return therir product in case of any fault.</p>
                         </div>
                     </div>
                 </div>
@@ -140,8 +140,8 @@ if (isset($_POST['subscribe'])) {
             <div class="row">
                 <div class="col-12">
                     <div class="footer-bottom">
-                        <p class="footer-copytext">&copy; All Copyrights Reserved by <a href="#">Mironcoder</a></p>
-                        <div class="footer-card"><a href="#"><img src="images/payment/jpg/01.jpg" alt="payment"></a><a
+                        <p class="footer-copytext">&copy; All Copyrights Reserved by <a href="#">Thrift Fashion</a></p>
+                        <div class="footer-card"><a href="#"><img src="images/logo/logo1.png" alt="payment"></a><a
                                 href="#"><img src="images/payment/jpg/02.jpg" alt="payment"></a><a href="#"><img
                                     src="images/payment/jpg/03.jpg" alt="payment"></a><a href="#"><img
                                     src="images/payment/jpg/04.jpg" alt="payment"></a>

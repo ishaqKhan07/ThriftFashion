@@ -75,7 +75,7 @@ include 'header.php';
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6 col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xs-12">
-                    <div class="user-form-logo"><a href="index.php"><img src="images/logo.png" alt="logo"></a></div>
+                    <div class="user-form-logo"><a href="index.php"><img src="images/logo/logo1.png" alt="logo"></a></div>
                     <div class="user-form-card">
                         <div class="user-form-title">
                             <h2>Join Now!</h2>
@@ -111,7 +111,7 @@ include 'header.php';
                         <p>Already Have An Account?<a href="login.php">login here</a></p>
                     </div>
                     <div class="user-form-footer">
-                        <p>Greeny | &COPY; Copyright by <a href="#">Mironcoder</a></p>
+                        <p>Thrift Fashion | &COPY; Copyright by <a href="#">Aptech IIC</a></p>
                     </div>
                 </div>
             </div>

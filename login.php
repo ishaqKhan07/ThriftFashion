@@ -54,7 +54,7 @@ include 'header.php';
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-5    col-xl-5 col-lg-16 col-md-6 col-sm-8   ">
-                    <div class="user-form-logo"><a href="index.php"><img src="images/logo.png" alt="logo"></a></div>
+                    <div class="user-form-logo"><a href="index.php"><img src="images/logo/logo1.png" alt="logo"></a></div>
                     <div class="user-form-card">
                         <div class="user-form-title">
                             <h2>welcome!</h2>
@@ -81,7 +81,7 @@ include 'header.php';
                         <p>Don't have any account?<a href="register.php">register here</a></p>
                     </div>
                     <div class="user-form-footer">
-                        <p>Greeny | &COPY; Copyright by <a href="#">Mironcoder</a></p>
+                        <p>Thrift Fashion | &COPY; Copyright by <a href="#">Aptech IIC</a></p>
                     </div>
                 </div>
             </div>
