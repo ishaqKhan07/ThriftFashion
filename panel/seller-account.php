@@ -2,9 +2,8 @@
 $title = 'Seller Reviews';
 include 'header.php';
 
-$contact = $data->select('select * from contact_setting');
-$links = $data->select('select * from quick_links');
-
+$contact_setting = $data->select('select * from contact_setting');
+$links_setting = $data->select('select * from quick_links');
 
 if(isset($_POST['contact'])){
     $email = $_POST['email'];
@@ -47,7 +46,6 @@ if(isset($_POST['link'])){
 }
 ?>
 
-
 <section class="dashboard">
     <div class="container-fluid">
         <div class="row">
@@ -59,7 +57,9 @@ if(isset($_POST['link'])){
                                 <h4>Contact Information</h4>
                             </div>
                             <form method='post' class="w-100">
-                                <label>Support Email</label>lil" name="email" value="<?= $contact['support_mail'] ?>" class="form-control mb-2"/>
+                                <?php  while($contact = $contact_setting->fetch_assoc()){ ?>
+                                <label>Support Email</label>
+                                <input type="email" name="email" value="<?= $contact['support_mail'] ?>" class="form-control mb-2"/>
 
                                 <label>Phone Number</label>
                                 <input type="text" name="phone" value="<?= $contact['phone'] ?>" class="form-control mb-2"/>
@@ -68,6 +68,7 @@ if(isset($_POST['link'])){
                                 <input type="text" name="address" value="<?= $contact['address'] ?>" class="form-control mb-2"/>
             
                                 <button type="submit" name="contact" class="btn theme-btn mt-2">Update</button>
+                                <?php } ?>
                             </form>
                         </div>
                         <div class="col-md-6">
@@ -75,6 +76,7 @@ if(isset($_POST['link'])){
                                 <h4>Quick Links</h4>
                             </div>
                             <form method='post' class="w-100">
+                            <?php  while($links = $links_setting->fetch_assoc()){ ?>
                                 <label>Facebook</label>
                                 <input type="text" name="facebook" value="<?= $links['facebook'] ?>" class="form-control mb-2"/>
 
@@ -91,6 +93,7 @@ if(isset($_POST['link'])){
                                 <input type="text" name="pinterest" value="<?= $links['pinterest'] ?>" class="form-control mb-2"/>
             
                                 <button type="submit" name="link" class="btn theme-btn mt-2">Update</button>
+                                <?php } ?>
                             </form>
                         </div>
                     </div>

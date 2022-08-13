@@ -151,11 +151,6 @@ li.nav-link a {
     transform: rotate(360deg);
   }
 }
-
-<<<<<<< HEAD
-/* Begin of Nav bar section  */
-=======
-/* Inner Banner Css Start Here */
 .seller-active {
   background-color: #000531;
 }
@@ -205,7 +200,7 @@ li.nav-link a {
   }
 }
 /* Inner Banner Css End Here */
->>>>>>>58c409e8bc29999cd913f7c269a5f2c2d26ef203 .main-logo img {
+ .main-logo img {
   width: 60%;
 }
 .nav-bar ul {

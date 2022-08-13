@@ -13,7 +13,7 @@ if (isset($_POST['subscribe'])) {
 
 
 ?>
-<section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
+<section class="news-part" style="background: url(images/banner/news_letter.jpg) no-repeat center;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5 col-lg-6 col-xl-7">
@@ -77,11 +77,10 @@ if (isset($_POST['subscribe'])) {
 <footer class="footer-part">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-xl-3">
-                    <div class="footer-widget"><a class="footer-logo" href="#"><img src="images/logo.png"
+                <div class="col-sm-8 col-xl-4">
+                    <div class="footer-widget"><a class="footer-logo" href="#"><img src="images/logo/logo1.png"
                                 alt="logo"></a>
-                        <p class="footer-desc">Adipisci asperiores ipsum ipsa repellat consequatur repudiandae quisquam
-                            assumenda dolor perspiciatis sit ipsum dolor amet.</p>
+                        <p class="footer-desc">We believe no item should be thrown away - especially when it could be worn again. By giving clothes a second life, we’re powering the circular economy for fashion.</p>
                         <ul class="footer-social">
                             <?php
                                  while ($link = mysqli_fetch_assoc($links)){
@@ -95,7 +94,7 @@ if (isset($_POST['subscribe'])) {
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-8 col-xl-4">
                     <div class="footer-widget contact">
                         <h3 class="footer-title">contact us</h3>
                         <div class="navbar-info-group">
@@ -117,7 +116,7 @@ if (isset($_POST['subscribe'])) {
                     </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-8 col-xl-4">
                     <div class="footer-widget">
                         <h3 class="footer-title">quick Links</h3>
                         <div class="footer-links">
@@ -134,15 +133,6 @@ if (isset($_POST['subscribe'])) {
                                 <li><a href="privacy.php">Privacy Policy</a></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="footer-widget">
-                        <h3 class="footer-title">Download App</h3>
-                        <p class="footer-desc">Lorem ipsum dolor sit amet tenetur dignissimos ipsum eligendi autem
-                            obcaecati minus ducimus totam reprehenderit exercitationem!</p>
-                        <div class="footer-app"><a href="#"><img src="images/google-store.png" alt="google"></a><a
-                                href="#"><img src="images/app-store.png" alt="app"></a></div>
                     </div>
                 </div>
             </div>

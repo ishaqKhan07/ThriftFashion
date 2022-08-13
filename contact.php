@@ -43,7 +43,7 @@ $query="INSERT INTO `contact`
  ?>
 
 <link rel="stylesheet" href="css/contact.css">
-    <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
+    <section class="inner-section single-banner" style="background: url(images/banner/banner2.jpg) no-repeat center;">
         <div class="container">
             <h2>contact us</h2>
         </div>

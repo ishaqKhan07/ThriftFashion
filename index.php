@@ -3,8 +3,12 @@ $title = 'Home';
 include 'custom.php';
 include 'header.php';
 
+<<<<<<< Updated upstream
 // die($_SESSION);
 $products = $data->select('select * from products');
+=======
+$product_categories = $data->select("select * from product_categories");
+>>>>>>> Stashed changes
 $data = $data->select("select * from feedback limit 5");
 $categories = $data->select("select * from categories")
 
@@ -81,12 +85,19 @@ $categories = $data->select("select * from categories")
                     <div class="banner-category">
                         <div class="banner-category-head"><i class="fas fa-bars"></i><span>top categories</span></div>
                         <ul class="banner-category-list">
+<<<<<<< Updated upstream
                             <?php 
                                 while($cat = $categories->fetch_assoc){
                             ?>
                             <li class="banner-category-item"><a href="category?" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span>TShirts</span></a>
                             </li>
                             <?php } ?>
+=======
+                            <?php while($cat = $product_categories->fetch_assoc()){ ?>
+                            <li class="banner-category-item"><a href="shop.php?category=<?= $cat['name'];  ?>" > <img src="images/cloth-icon.png" /> &nbsp;&nbsp; <span><?= $cat['name'] ?></span></a>
+                            </li>
+                            <?php } ?>    
+>>>>>>> Stashed changes
                         </ul>
                     </div>
                 </div>
@@ -96,95 +107,33 @@ $categories = $data->select("select * from categories")
                             <div class="home-grid-slider slider-dots">
                                 <div class="banner-wrap bg1">
                                     <div class="row align-items-center">
-                                        <div class="col-md-6 col-lg-6">
-                                            <div class="banner-content">
-                                                <h2>we are delivered organic foods item within 24 hours.</h2><a href="#" class="btn btn-inline"><i class="fas fa-shopping-basket"></i><span>shop now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6">
-                                            <div class="banner-image"><img src="images/home/index/01.png" alt=""></div>
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="banner-image"><img src="images/banner/banner_img1.png" alt=""></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner-wrap bg2">
                                     <div class="row align-items-center">
-                                        <div class="col-md-6 col-lg-6">
-                                            <div class="banner-content">
-                                                <h2>get your organic healthy foods item online today.</h2><a href="#" class="btn btn-inline"><i class="fas fa-shopping-basket"></i><span>shop now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6">
-                                            <div class="banner-image"><img src="images/home/index/02.png" alt=""></div>
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="banner-image"><img src="images/banner/banner_img2.png" alt=""></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner-wrap bg3">
                                     <div class="row align-items-center">
-                                        <div class="col-md-6 col-lg-6">
-                                            <div class="banner-content">
-                                                <h2>we are delivered organic foods item within 24 hours.</h2><a href="#" class="btn btn-inline"><i class="fas fa-shopping-basket"></i><span>shop now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6">
-                                            <div class="banner-image"><img src="images/home/index/03.png" alt=""></div>
+                                        <div class="col-md-12 col-lg-12">
+                                            <div class="banner-image"><img src="images/banner/banner_img3.png" alt=""></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6">
-                            <div class="banner-promo"><a href="#"><img src="images/promo/home/04.jpg" alt="promo"></a></div>
-                        </div>
-                        <div class="col-md-6 col-lg-6">
-                            <div class="banner-promo"><a href="#"><img src="images/promo/home/05.jpg" alt="promo"></a></div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section intro-part">
-        <div class="container">
-            <div class="row intro-content">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon"><i class="fas fa-truck"></i></div>
-                        <div class="intro-content">
-                            <h5>free home delivery</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon"><i class="fas fa-sync-alt"></i></div>
-                        <div class="intro-content">
-                            <h5>instant return policy</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon"><i class="fas fa-headset"></i></div>
-                        <div class="intro-content">
-                            <h5>quick support system</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon"><i class="fas fa-lock"></i></div>
-                        <div class="intro-content">
-                            <h5>secure payment way</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <section class="section deals-part">
         <div class="container">
             <div class="row">

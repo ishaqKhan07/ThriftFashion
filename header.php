@@ -58,7 +58,7 @@ if(isset($_SESSION['username'])){
                 </button>
             </div>
             <a href="home-standard.php" class="header-logo">
-                <img src="images/logo.png" alt="logo"></a>
+                <img src="images/logo/logo1.png" alt="logo"></a>
             
             <form class="header-form">
                 <input type="text" placeholder="Search anything...">
