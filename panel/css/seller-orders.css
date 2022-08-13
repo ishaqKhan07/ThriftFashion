@@ -26,6 +26,17 @@
   flex: 1;
   margin-left: 45px;
 }
+.sellers_orders tr td img {
+  max-width: 50px;
+  max-height: 50px;
+}
+.sellers_orders tr td p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-size: 11px;
+}
 .dashboard ul.shipmemntradios {
   padding: 0;
   margin: 0;
@@ -106,7 +117,16 @@
 .sellers_orders tr td {
   border: 0;
   text-align: center;
+  padding: 5px 5px;
   vertical-align: middle;
+}
+.sellers_orders tr td p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 .sellers_orders .heading_wrapper {
   padding-bottom: 30px;

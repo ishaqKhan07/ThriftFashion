@@ -1,5 +1,6 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <?php
+$title = 'Profile';
 include 'custom.php';
 // die($);
 // print_r($_SESSION);
